@@ -1,3 +1,4 @@
 # PumpkinWarrior.github.io
 
-test
+website soon
+just practicing

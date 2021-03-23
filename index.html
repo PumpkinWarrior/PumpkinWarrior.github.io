@@ -1,90 +1,100 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>PumpkinWarrior</title>
-		<style>
-            .container {
-                position: relative;
-                max-width: 100%;
-            }
+<head>
+    <title>PumpkinWarrior</title>
+    <link rel="icon" href="favicon.ico">
+    <style>
+        .container {
+            position: relative;
+            max-width: 100%;
+        }
 
-            .image {
-                display: block;
-                max-width: 100%;
-                height: auto;
-            }
+        .image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
 
-            .overlay {
-                position: absolute;
-                bottom: 100%;
-                left: 0;
-                right: 0;
-                background-color: #ffa64d;
-                overflow: hidden;
-                width: 100%;
-                height: 0;
-                transition: .5s ease;
-                
-            }
+        .overlay {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            background-color: #ffa64d;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
 
-            .container:hover .overlay {
-                bottom: 0;
-                height: 100%;
-   
-            }
+        .container:hover .overlay {
+            bottom: 0;
+            height: 100%;
+        }
 
-            .text {
-                white-space: nowrap;
-                color: white;
-                font-size: 40px;
-                position: absolute;
-                overflow: hidden;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                opacity: 
-            }
-            .button {
-                background-color: #4CAF50; /* Green */
-                border: thick;
-                color: navajowhite;
-                padding: 15px 32px;
-                text-align: center;
-                text-decoration: solid;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                cursor: pointer;
-            }
-            .center {
-                margin: 0;
-                position:absolute;
-                left: 50%;
-            }
+        .text {
+            white-space: nowrap;
+            color: white;
+            font-size: 40px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            opacity:
+        }
 
-        </style>
-	<head>
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: thick;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: solid;
+            display: initial;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .header {
+            position: fixed;
+            padding: 10px;
+            background: #ff6600;
+            width: 100%;
+            z-index: 12;
+            left: 0;
+            top: 0;
+            font-size: 30px;
+        }
+    </style>
+    <head>
 
         <body>
-
+            <div class="header">
+                <header>     
+                    <img src="images/Logo.png" alt="Logo" style="width:10%;display: inline;" href="#">                                        
+                        <button class="button" href="#"> Home </button>
+                        <button class="button" href="#"> Programming </button>
+                        <button class="button" href="#"> Music </button>
+                        <button class="button" href="#"> About </button>              
+                </header>
+            </div>
             <div class="container">
                 <img src="images/Home.png" alt="Cover" class="image" style="width:100%">
                 <div class="overlay">
                     <div class="text" style="font-family: Rockwell"><b>Sharing my music to the world!</b></div>
                 </div>
             </div>
-            <div class="center">
-                <button class="button"> Home </button>
-                <button class="button"> Programming </button>
-                <button class="button"> Music </button>
-                <button class="button"> About </button>
-            </div>
+
             <div>
                 <h1 style="font-family: arial; font-size:1">PumpkinWarrior</h1>
                 <p>
                     Freelance music producer from the Philippines
                 </p>
+               
+
             </div>
         </body>
 </html>	

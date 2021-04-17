@@ -1,0 +1,110 @@
+/*General*/
+
+body {
+    background-color: wheat;
+    color: black;
+}
+
+/*Navigation Bar*/
+.pagenameformat {
+    font-family: 'Showcard Gothic';
+    font-weight: bold;
+    font-size: 150%;
+    float: left;
+    position: fixed;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    top: 10px;
+    left: 50px;
+}
+    .pagenameformat a:hover {
+        font-family: 'Showcard Gothic';
+        font-weight: bold;
+        font-size: 110%;
+        float: left;
+        position: fixed;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
+        top: 9px;
+        left: 45px;
+        cursor: pointer;
+    }
+.topnav {
+    overflow: hidden;
+    background-color: #ff8000;
+    position:fixed;
+    width: 100%;
+    left: -1px;
+    top: -1px;
+}
+
+    .topnav a {
+        float: right;
+        color: #000000;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        
+    }
+
+        .topnav a:hover {
+            background-color: #993d00;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #145214;
+            color: white;
+        }
+
+
+/*Overlay section needs to be fixed*/
+.container {
+    position: relative;
+    max-width: 100%;
+}
+
+
+.background {
+    /* The image used */
+    background-image: url("images/Home.png");
+    width: 120%;    
+    /* Set a specific height */
+    min-height: 780px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 
+}
+
+.overlay {
+    /* Create the overlay */
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 128, 0, 0.3);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.container:hover .parallax{
+    bottom: 0;
+    height: 100%;
+}
+
+.text {
+    white-space: nowrap;
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}

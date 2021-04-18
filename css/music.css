@@ -178,7 +178,8 @@ body {
     .topnavigation {
         display: none;
         
-    }
+        }
+    
    
 }
     /*to be edited*/
@@ -203,7 +204,7 @@ body {
   
 }
 .parent {
-    margin: auto;
+    margin: auto ;
     width: 60%;
     padding: 10px;
     z-index: 1;
@@ -279,4 +280,39 @@ footer {
     left: -1px;
     z-index: 6;
 
+}
+/*releases gridbox list*/
+.gridbox {
+    display: grid;
+    grid-template-columns: 40px 40px 40px;
+    grid-column-gap: 300px;
+    grid-row-gap: 75px;
+}
+.gridboxoutline {
+    width: 60%;
+    z-index: 1;
+    display: table;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width: 1080px) {
+    .gridbox {
+        grid-template-columns: 40px 40px;
+    }
+}
+@media (max-width: 700px) {
+    .gridbox {
+        grid-template-columns: 40px;
+    }
+}
+
+.song {
+    border:10px double black;
+    max-width:250px;
+    transition: ease-in 0.2s;
+}
+.song:hover {
+    transform: scale(1.1)
 }

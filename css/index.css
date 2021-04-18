@@ -221,42 +221,47 @@ main {
 }
 .avatarimg {
     position: absolute;
-    max-width: 20%;
     border-radius: 50%;
     z-index: 1;
     display: block;
-    top: 60%;
-    left: 60%;
-    transform: translate(-50%,0%);  
+    left: 50%;
+    max-width: 20%;
+    margin-top: 50%;
+    
+    
+}
+
+
+@media (min-width: 1280px) {
+    .avatarimg {
+        
+        margin-top: 35%;
+    }
 }
 @media (max-width: 1280px) {
     .avatarimg {
-        left: 50%;
+        left: 40%;
+       
     }
 }
-@media (max-width: 600px) {
-    .avatarimg {
-        top: 20vh;
-    }
-}
+
+
+
     .avatarbg {
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 100%;
         object-fit: fill;
+        z-index: 0;
     }
     /*bgcontainer formatitng    */
 .bgcontainer {
-    max-width: 100vw;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    width: auto;
     background-color: #fff474;
     padding: 1vw;
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 1;
+    display: flex;
+   
 }
 
     @media (max-width: 600px) {

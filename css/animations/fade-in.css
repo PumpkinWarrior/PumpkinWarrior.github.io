@@ -1,0 +1,15 @@
+﻿.bgcontainer {
+    animation: transitionIn 2s;
+}
+
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+
+    }
+    to {
+        opacity: 1;
+        
+    }
+}

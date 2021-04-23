@@ -8,13 +8,9 @@
         opacity:0;
         left: -20vw;
     }
-    50% {
-        opacity: 0;
-        left: -20vw;
-    }
-
+   
     100% {
-        opacity: 0.7;
+        opacity: 1.0;
         left: 0vw;
     }
 }

@@ -12,46 +12,70 @@
 </head>
 
 <body>
-    <!--Sideabar Navigation Bar-->
-    <div class="sidenav">
+    <!--Testing-->
+    <div id="mySidebar" class="sidenav">
+        
+        <!--Side navigation-->
+       
+            
         <div class="avatar">
             <img src="images/home_avatar.png" alt="avatar">
+            <div style="text-align: center; margin-top: 5vw;"><b>Social Links</b></div>
         </div>
-        <div style="text-align: center; margin-top: 5vw;"><b>Social Links</b></div>
-        <div class="icon-bar">
-            <a href="https://www.facebook.com/gaming/pumpkinwarrior22" target="blank"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://twitter.com/PumpkinW4rrior" target="blank"><i class="fab fa-twitter-square"></i></a>
-            <a href="https://www.instagram.com/pumpkinw4rrior" target="blank"><i class="fab fa-instagram-square"></i></a>
-            <a href="https://www.youtube.com/channel/UCqxQfACjfVD-sEd1gocPwWg" target="blank"><i class="fab fa-youtube-square"></i></a>
-            <a href="https://github.com/PumpkinWarrior" target="blank"><i class="fab fa-github-square"></i></a>
-            <a href="https://open.spotify.com/artist/4XCTE5J9rcRL8eKrdk03Tx?si=zqz0HWZtRNiRHFauJN-88A" target="blank"><i class="fab fa-spotify"></i></a>
-            <a href="https://music.apple.com/us/artist/pumpkinwarrior/1550112881
-" target="blank"><i class="fab fa-itunes-note"></i></a>
-            <a href="https://soundcloud.com/pumpkinwarrior" target="blank"><i class="fab fa-soundcloud"></i></a>
-            <a href="https://deezer.page.link/r65eEpSgJyzMXj2x7" target="blank"><i class="fab fa-deezer"></i></a>
-            <a href="https://music.amazon.com/artists/B08V8KCWHP/pumpkinwarrior" target="blank"><i class="fab fa-amazon"></i></a>
-            <a href="https://www.reddit.com/user/PDGreat" target="blank"><i class="fab fa-reddit-square"></i></a>
-            <a href="https://www.tiktok.com/@pumpkinw4rrior" target="blank"><i class="fab fa-tiktok"></i></a>
-            <a href="https://discord.gg/rjadfPv" target="blank"><i class="fab fa-discord"></i></a>
-        </div>
-        <hr />
-        <ul>
-            <li><a href="#about me">Who am I?</a></li>
-            <li><a href="#education">Education</a></li>
-        </ul>
+            
+            <div class="icon-bar" >
+                <a href="https://www.facebook.com/gaming/pumpkinwarrior22" target="blank" ><i class="fab fa-facebook-square" ></i></a>
+                <a href="https://twitter.com/PumpkinW4rrior" target="blank"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.instagram.com/pumpkinw4rrior" target="blank"><i class="fab fa-instagram-square"></i></a>
+                <a href="https://www.youtube.com/channel/UCqxQfACjfVD-sEd1gocPwWg" target="blank"><i class="fab fa-youtube-square"></i></a>
+                <a href="https://github.com/PumpkinWarrior" target="blank"><i class="fab fa-github-square"></i></a>
+                <a href="https://open.spotify.com/artist/4XCTE5J9rcRL8eKrdk03Tx?si=zqz0HWZtRNiRHFauJN-88A" target="blank"><i class="fab fa-spotify"></i></a>
+                <a href="https://music.apple.com/us/artist/pumpkinwarrior/1550112881" target="blank"><i class="fab fa-itunes-note"></i></a>
+                <a href="https://soundcloud.com/pumpkinwarrior" target="blank"><i class="fab fa-soundcloud"></i></a>
+                <a href="https://deezer.page.link/r65eEpSgJyzMXj2x7" target="blank"><i class="fab fa-deezer"></i></a>
+                <a href="https://music.amazon.com/artists/B08V8KCWHP/pumpkinwarrior" target="blank"><i class="fab fa-amazon"></i></a>
+                <a href="https://www.reddit.com/user/PDGreat" target="blank"><i class="fab fa-reddit-square"></i></a>
+                <a href="https://www.tiktok.com/@pumpkinw4rrior" target="blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://discord.gg/rjadfPv" target="blank"><i class="fab fa-discord"></i></a>
+            </div>
+            <hr />
+            <ul class="Shortcuts">
+                <li><a href="#about me">Who am I?</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
 
 
 
 
+  
     </div>
+
+    <div id="buttonsmall">
+        <!--Sidebar button-->
+        <button id="openbtn"  onclick="sidenav()">☰</button>
+        
+    </div>
+
+    <script>
+        /*open for small devices */
+        function sidenav() {
+            var x = document.getElementById("mySidebar");
+            if (x.style.width === "0%") {
+                x.style.width = "100%";
+            } else {
+                x.style.width = "0%";
+            }
+        }
+    </script>
+   
     <!--Display Navigation Bar-->
     <div class="topnavigation">
         <div class="topnav">
 
-            <a href="#contact" >Contact</a>
-            <a href="#about" >About</a>
-            <a href="music.html" >Music</a>
-            <a class="active" href="index.html" >Home</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="music.html">Music</a>
+            <a class="active" href="index.html">Home</a>
         </div>
         <div class="pagenameformat">
 
@@ -69,8 +93,8 @@
 
     </div>
 
-    
-    
+
+
     <main>
 
         <div class="parent">
@@ -97,11 +121,12 @@
             </div>
         </div>
 
-      
+
     </main>
     <footer>
 
-        <h1>lorem ipsum</h1>
+        <h3>This website is for my project and it will become my official website soon.</h3>
+
     </footer>
 </body>
 </html>

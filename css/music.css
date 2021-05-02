@@ -11,7 +11,7 @@ body {
 .pagenameformat {
     position: absolute;
     font-family: 'Showcard Gothic';
-  
+    font-weight: bold;
     font-size: 100%;
     float: left;
     position: fixed;
@@ -22,42 +22,43 @@ body {
     color: black;
     z-index: 5;
     color: black;
-    transition: transform .2s;
+    transition: 0.2s;
 }
+
     .pagenameformat a:link {
         position: absolute;
         text-decoration: none;
-        
+        font-family: 'Showcard Gothic';
         font-weight: bold;
-        font-size: 120%;
+        font-size: 140%;
         float: left;
         position: fixed;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: white;
-      
         color: orangered;
         text-decoration: none;
     }
+
     .pagenameformat a:visited {
         position: absolute;
         text-decoration: none;
-        
+        font-family: 'Showcard Gothic';
         font-weight: bold;
-        font-size: 100%;
+        font-size: 140%;
         float: left;
         position: fixed;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: white;
-       
         color: black;
         text-decoration: none;
     }
+
     .pagenameformat a:hover {
         position: absolute;
         -ms-transform: scale(1.1);
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
-        
+        font-family: 'Showcard Gothic';
         font-weight: bold;
         float: left;
         position: fixed;
@@ -73,11 +74,11 @@ body {
     overflow: hidden;
     position: fixed;
     width: 100%;
-    left: 0px;
-    top: -1px;
+    padding: 1vh;
+    left: 0vw;
+    top: -1vh;
     z-index: 5;
     background: rgba(255,244,116,.6);
-    
 }
 
     .topnav a {
@@ -87,7 +88,6 @@ body {
         padding: 14px 16px;
         text-decoration: none;
         font-size: 17px;
-        
     }
 
         .topnav a:hover {
@@ -101,32 +101,32 @@ body {
         }
 
 
- /*Side Navigation*/
+/*Side Navigation*/
 .sidenav {
     overflow: hidden;
+    overflow-y:visible;
     background: rgba(36,49,56,.7);
     position: fixed;
     height: 100%;
-    width: 20%;
+    width: 100%;
     left: 0vw;
-    top: 6vh;
+    top: 0vh;
     z-index: 4;
+    transition: 0.7s;
 }
+
     .sidenav img {
         width: 50%;
         border-radius: 50%;
         transform: translate(50%,25%);
         opacity: 0.8;
+        margin-top: 10vh;
     }
-/**fix this center the a element*/
+
     .sidenav li {
-       
- 
         margin-left: 0%;
-        
         text-align: center;
         display: block;
-     
     }
 
     .sidenav a {
@@ -148,53 +148,102 @@ body {
             background-color: #145214;
             color: white;
         }
-.sidenav hr {
-    width: 80%;
-    color: white;
-    margin-top: 1vw;
- 
+
+    .sidenav hr {
+        width: 80%;
+        color: white;
+        margin-top: 1vw;
+    }
+
+#sociallinkword {
+    margin-top: 10vh;
+}
+/*side navigation open and close button*/
+/*Testing*/
+
+#openbtn {
+    font-size: 40px;
+    cursor: pointer;
+    background-color: rgb(0,0,0,0);
+    color: yellow;
+    padding: 10px 15px;
+    border: none;
+    position: fixed;
+    z-index: 7;
+    position: fixed;
+    margin-top: 10vh;
+    transition: 0.3s;
+}
+
+    #openbtn:hover {
+        background-color: rgb(0,0,0,0);
+        font-size: 45px;
+    }
 
 }
 
-        .topnavigation {
-            
-        }
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+
+
+
+
+
+
+
+/*topnavigation*/
+.topnavigation {
+}
+
 .avatar {
     transition: transform .2s;
     margin: 0 auto;
 }
-.avatar:hover {
-    -ms-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-    cursor: pointer;
-    
-}
+
+    .avatar:hover {
+        -ms-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        cursor: pointer;
+    }
 
 
 /*Navigation bars hidden on phone*/
 
 
-    @media (max-width: 600px) {
+@media (max-width: 1023px) {
+    /*Format For small devices*/
     .topnavigation {
         display: none;
-        
-        }
-    
-   
-}
-    /*to be edited*/
-@media (max-width: 1280px) {
+    }
+
     .sidenav {
-        display: none;
+        width: 0;
     }
-    
-}
-@media (min-width: 1280px) {
-    main {
-        margin-left: 20vw;
+
+    #sociallinkword {
+        margin-top: 10vh;
     }
 }
+
+@media (min-width: 1024px) { /*Format For big devices*/
+    .sidenav {
+        width: 20%;
+    }
+
+    .shortcuts li {
+        font-size: 10vh;
+    }
+}
+
+/*to be edited*/
+
+
 
 
 /* Content Formating*/
@@ -202,77 +251,63 @@ body {
     position: inherit;
     margin: auto;
     z-index: 1;
-  
 }
+
 .parent {
-    background-color: rgb(56, 28, 42, 0.6);
-    max-width: 100vw;
-    margin-right: 10px;
-    
+    margin: auto;
+    width: 60%;
     padding: 10px;
     z-index: 1;
 }
+
 main {
     max-width: 100vw;
-    margin-top: 15vh;
+    margin-top: -5vh;
+    margin-left: 20vw;
     font-family: Comic Sans MS;
+}
+
+@media (max-width: 1023px) { /*Change margin of main at smaller devices*/
+    main {
+        margin-left: 0vw;
+    }
 }
 /*picture formmatting*/
 .avatarcontainer {
-    position: relative;
+    position: absolute;
     text-align: center;
 }
+
 .avatarimg {
-    position: absolute;
-    max-width: 30%;
     border-radius: 50%;
     z-index: 1;
+    max-width: 20%;
+    margin-top: 50%;
+}
+
+
+
+
+
+
+
+.avatarbg {
     display: block;
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%,0%);  
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    object-fit: fill;
+    z-index: 0;
 }
-@media (max-width: 1280px) {
-    .avatarimg {
-        left: 50%;
-    }
-}
-@media (max-width: 600px) {
-    .avatarimg {
-        top: 20vh;
-    }
-}
-    .avatarbg {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        object-fit: fill;
-    }
-    /*bgcontainer formatitng    */
+/*bgcontainer formatitng    */
 .bgcontainer {
-    max-width: 100vw;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    width: auto;
     background-color: #fff474;
     padding: 1vw;
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 1;
+    display: flex;
 }
 
-    @media (max-width: 600px) {
-        .bgcontainer {
-            margin: 0;
-        }
-    }
 
-    @media (min-width: 1280px) {
-        .bgcontainer {
-            margin-left: 20vw;
-        }
-    }
 /*footer formatting*/
 footer {
     /*to be edited*/
@@ -281,8 +316,23 @@ footer {
     width: 100%;
     left: -1px;
     z-index: 6;
-
 }
+
+/*social media links*/
+.icon-bar {
+    justify-content: center;
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px;
+}
+
+
+
+
+
+
+
+/*release content part*/
 /*releases gridbox list*/
 .gridbox {
     display: grid;
@@ -331,10 +381,10 @@ footer {
 
 /*social media links*/
 .icon-bar {
+    justify-content: center;
     margin-top: 5vh;
-    margin-left: 2.5vw;
     display: grid;
-    grid-template-columns: 3vw 3vw 3vw 3vw 3vw;
-
+    grid-template-columns: 50px 50px 50px 50px 50px;
 }
+
 

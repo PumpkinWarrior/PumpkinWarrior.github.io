@@ -14,60 +14,55 @@
 <body>
     <!--Testing-->
     <div id="mySidebar" class="sidenav">
-        
+
         <!--Side navigation-->
-       
-            
+
+
         <div class="avatar">
             <img src="images/home_avatar.png" alt="avatar">
-            <div style="text-align: center; margin-top: 5vw;"><b>Social Links</b></div>
+
         </div>
+        <div id="sociallinkword" style="text-align: center;"><b>Social Links</b></div>
+        <div class="icon-bar">
+            <a href="https://www.facebook.com/gaming/pumpkinwarrior22" target="blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://twitter.com/PumpkinW4rrior" target="blank"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://www.instagram.com/pumpkinw4rrior" target="blank"><i class="fab fa-instagram-square"></i></a>
+            <a href="https://www.youtube.com/channel/UCqxQfACjfVD-sEd1gocPwWg" target="blank"><i class="fab fa-youtube-square"></i></a>
+            <a href="https://github.com/PumpkinWarrior" target="blank"><i class="fab fa-github-square"></i></a>
+            <a href="https://open.spotify.com/artist/4XCTE5J9rcRL8eKrdk03Tx?si=zqz0HWZtRNiRHFauJN-88A" target="blank"><i class="fab fa-spotify"></i></a>
+            <a href="https://music.apple.com/us/artist/pumpkinwarrior/1550112881" target="blank"><i class="fab fa-itunes-note"></i></a>
+            <a href="https://soundcloud.com/pumpkinwarrior" target="blank"><i class="fab fa-soundcloud"></i></a>
+            <a href="https://deezer.page.link/r65eEpSgJyzMXj2x7" target="blank"><i class="fab fa-deezer"></i></a>
+            <a href="https://music.amazon.com/artists/B08V8KCWHP/pumpkinwarrior" target="blank"><i class="fab fa-amazon"></i></a>
+            <a href="https://www.reddit.com/user/PDGreat" target="blank"><i class="fab fa-reddit-square"></i></a>
+            <a href="https://www.tiktok.com/@pumpkinw4rrior" target="blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://discord.gg/rjadfPv" target="blank"><i class="fab fa-discord"></i></a>
+        </div>
+        <hr />
+        <ul class="Shortcuts">
+            <li><a href="#about me" onclick="sidenav()">Who am I?</a></li>
+            <li><a href="#education" onclick="sidenav()">Education</a></li>
             
-            <div class="icon-bar" >
-                <a href="https://www.facebook.com/gaming/pumpkinwarrior22" target="blank" ><i class="fab fa-facebook-square" ></i></a>
-                <a href="https://twitter.com/PumpkinW4rrior" target="blank"><i class="fab fa-twitter-square"></i></a>
-                <a href="https://www.instagram.com/pumpkinw4rrior" target="blank"><i class="fab fa-instagram-square"></i></a>
-                <a href="https://www.youtube.com/channel/UCqxQfACjfVD-sEd1gocPwWg" target="blank"><i class="fab fa-youtube-square"></i></a>
-                <a href="https://github.com/PumpkinWarrior" target="blank"><i class="fab fa-github-square"></i></a>
-                <a href="https://open.spotify.com/artist/4XCTE5J9rcRL8eKrdk03Tx?si=zqz0HWZtRNiRHFauJN-88A" target="blank"><i class="fab fa-spotify"></i></a>
-                <a href="https://music.apple.com/us/artist/pumpkinwarrior/1550112881" target="blank"><i class="fab fa-itunes-note"></i></a>
-                <a href="https://soundcloud.com/pumpkinwarrior" target="blank"><i class="fab fa-soundcloud"></i></a>
-                <a href="https://deezer.page.link/r65eEpSgJyzMXj2x7" target="blank"><i class="fab fa-deezer"></i></a>
-                <a href="https://music.amazon.com/artists/B08V8KCWHP/pumpkinwarrior" target="blank"><i class="fab fa-amazon"></i></a>
-                <a href="https://www.reddit.com/user/PDGreat" target="blank"><i class="fab fa-reddit-square"></i></a>
-                <a href="https://www.tiktok.com/@pumpkinw4rrior" target="blank"><i class="fab fa-tiktok"></i></a>
-                <a href="https://discord.gg/rjadfPv" target="blank"><i class="fab fa-discord"></i></a>
-            </div>
-            <hr />
-            <ul class="Shortcuts">
-                <li><a href="#about me">Who am I?</a></li>
-                <li><a href="#education">Education</a></li>
-            </ul>
 
 
 
 
-  
+        </ul>
+
+
+
+
+
     </div>
 
-    <div id="buttonsmall">
+    <div id="buttoncontainer">
         <!--Sidebar button-->
-        <button id="openbtn"  onclick="sidenav()">☰</button>
-        
+        <button id="openbtn" onclick="sidenav()">☰</button>
+
     </div>
 
-    <script>
-        /*open for small devices */
-        function sidenav() {
-            var x = document.getElementById("mySidebar");
-            if (x.style.width === "0%") {
-                x.style.width = "100%";
-            } else {
-                x.style.width = "0%";
-            }
-        }
-    </script>
-   
+
+
     <!--Display Navigation Bar-->
     <div class="topnavigation">
         <div class="topnav">
@@ -84,18 +79,18 @@
         </div>
     </div>
 
+    <main id="marginmain">
+        <div class="bgcontainer">
+            <!--avatar image for smaller devices-->
 
-    <div class="bgcontainer">
-        <!--avatar image for smaller devices-->
+            <img class="avatarbg" src="images/avatar_bg.jpg" alt="avatarbg">
+            <div class="avatarcontainer"><img class="avatarimg" src="images/home_avatar.png" alt="avatar"></div>
 
-        <img class="avatarbg" src="images/avatar_bg.jpg" alt="avatarbg">
-        <img class="avatarimg" src="images/home_avatar.png" alt="avatar">
-
-    </div>
+        </div>
 
 
 
-    <main>
+
 
         <div class="parent">
             <h1 style="font-family: arial;" id="about me">Hi I'm JC!</h1>
@@ -128,6 +123,37 @@
         <h3>This website is for my project and it will become my official website soon.</h3>
 
     </footer>
+    <script>
+
+        /*open sidebar for different devices */
+        function sidenav() {
+            var x = document.getElementById("mySidebar");
+            var y = document.getElementById("marginmain");
+            if (x.style.width == "0vw") {
+                if (screen.width > 1024) {
+                    x.style.width = "20vw";
+                    y.style.marginLeft = "20vw";
+                } else {
+                    x.style.width = "100%";
+                    y.style.marginLeft = "0vw";
+                }
+            } else {
+                if (screen.width > 1024) {
+                    x.style.width = "0vw";
+                    y.style.marginLeft = "0vw";
+                } else {
+                    x.style.width = "0vw";
+                    y.style.marginLeft = "0vw";
+                }
+                
+            }
+        }
+           
+
+
+
+
+    </script>
 </body>
 </html>
 

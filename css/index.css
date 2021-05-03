@@ -74,21 +74,23 @@ body {
     overflow: hidden;
     position: fixed;
     width: 100%;
-    padding: 1vh;
+    padding: 2vh;
     left: 0vw;
     top: -1vh;
     z-index: 5;
     background: rgba(255,244,116,.6);
+    text-align: right;
+    margin-left: -15px;
 }
 
     .topnav a {
-        float: right;
+        
         color: black;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
         font-size: 17px;
-        
+       
     }
 
         .topnav a:hover {
@@ -182,12 +184,8 @@ body {
     #openbtn:hover {
         background-color: rgb(0,0,0,0);
         font-size: 45px;
-        
     }
-
     
-
-    }
 #main {
     
     padding: 16px;
@@ -222,11 +220,16 @@ body {
 /*Navigation bars hidden on phone*/
 
 
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
         /*Format For small devices*/
-    .topnavigation {
-        display: none;   
+    .pagenameformat {
+        display:none;
     }
+    .topnav {
+        text-align: center;
+    }
+        
+   
     .sidenav {
         width: 0;
     }
@@ -295,10 +298,6 @@ body {
         max-width: 20%;
         margin-top: 50%;
     }
-
-
-
-
 
 
 

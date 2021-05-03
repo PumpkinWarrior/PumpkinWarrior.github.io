@@ -74,15 +74,17 @@ body {
     overflow: hidden;
     position: fixed;
     width: 100%;
-    padding: 1vh;
+    padding: 2vh;
     left: 0vw;
     top: -1vh;
     z-index: 5;
     background: rgba(255,244,116,.6);
+    text-align: right;
+    margin-left: -15px;
 }
 
     .topnav a {
-        float: right;
+        
         color: black;
         text-align: center;
         padding: 14px 16px;
@@ -216,10 +218,13 @@ body {
 /*Navigation bars hidden on phone*/
 
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
     /*Format For small devices*/
-    .topnavigation {
+    .pagenameformat {
         display: none;
+    }
+    .topnav {
+        text-align: center;
     }
 
     .sidenav {
@@ -267,7 +272,7 @@ main {
     font-family: Comic Sans MS;
 }
 
-@media (max-width: 1023px) { /*Change margin of main at smaller devices*/
+@media (max-width: 1024px) { /*Change margin of main at smaller devices*/
     main {
         margin-left: 0vw;
     }

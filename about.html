@@ -1,24 +1,25 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Pumpkinwarrior</title>
+    <title>Jc Abalos</title>
     <link rel="icon" href="icons/index.ico">
-    <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="css/contact.css"><!--seperate css file in the future-->
     <link rel="stylesheet" href="css/animations/fade-in.css">
     <link rel="stylesheet" href="css/animations/ease-in-from-left.css">
     <script src="https://kit.fontawesome.com/4c7c5e368d.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
-    <!--Sideabar Navigation Bar-->
+    <!--Testing-->
     <div id="mySidebar" class="sidenav">
 
         <!--Side navigation-->
 
 
-        <div class="avatar">
-            <img src="images/Logo.png" alt="avatar">
+        <div class="avatar" style="border-radius: 50%;">
+            <img src="images/home_avatar.png" alt="avatar" >
 
         </div>
         <div id="sociallinkword" style="text-align: center;"><b>Social Links</b></div>
@@ -39,16 +40,10 @@
         </div>
         <hr />
         <ul class="Shortcuts">
-            <li><a href="#releases" onclick="sidenav()">Releases</a></li>
-            <li><a href="#musiccareer" onclick="sidenav()">Music Career</a></li>
-
-
-
+            <li><a href="#Contacts" onclick="sidenav()">Contacts</a></li>
+            <li><a href="#socials" onclick="sidenav()">Socials</a></li>
+            
         </ul>
-
-
-
-
 
     </div>
 
@@ -65,9 +60,9 @@
         <div class="topnav">
             <div>
                 <a href="index.html">Home</a>
-                <a href="music.html" class="active">Music</a>
-                <a href="contact.html">Contact</a>
-                <a href="about.html">About</a>
+                <a href="music.html">Music</a>
+                <a  href="contact.html">Contact</a>
+                <a class="active" href="about.html">About</a>
 
 
             </div>
@@ -75,60 +70,24 @@
         <div class="pagenameformat">
 
             <!--Put hover higlight and text outline here-->
-            <a href="music.html">Pumpkinwarrior</a>
+            <a href="index.html">Jc Abalos</a>
         </div>
     </div>
 
+    <main id="marginmain">
+       <!--Main Content-->
+        
+        <h1 style="text-align: center;">About</h1>
+            <p>This website is about me and my career in this life. Currently, I study in college and
+        currently polishing my skills in making music</p>
 
     
-
-
-
-    <main id="marginmain">
-        <div class="bgcontainer">
-            <!--avatar image for smaller devices-->
-
-            <img class="avatarbg" src="images/Home.png" alt="avatarbg">
-
-        </div>
-
-        <h1 style="font-family: arial;" id="releases">Releases</h1>
-        <div class="gridboxoutline">
-
-            <div class="gridbox">
-                <a href="https://open.spotify.com/track/29kq875VkJfAt592GLipy4?si=5af91817b2644f07" target="_blank">
-                    <img src="css/images/Coconut Dance.png" alt="coconutdance" class="song">
-                </a>
-                <a href="https://open.spotify.com/track/3zrkrrrQ33t1Kld6IEX9zS?si=f38322aeb666472a" target="_blank">
-                    <img src="css/images/Retry.png" alt="coconutdance" class="song">
-                </a>
-            </div>
-
-        </div>
-
-        <div class="parent" style="margin-top: 10vh;">
-            <h1 style="font-family: arial;" id="musiccareer">I as a Musician</h1>
-            <div class="child">
-                <ul>
-                    I got interested in music through video games so I tried to pickup my classmate's guitar
-                    when I was 15 because he plays it well.
-                    I started making music in August 2018 and learned the basics of mixing and mastering.
-                    Now I am continuously improving and currently released 2 music on different streaming platforms.
-                </ul>
-            </div>
-
-        </div>
-
-        <img src="css/images/banner2.png" alt="banner" style="width: 75vw;">
-
-
     </main>
     <footer id="footer">
 
         <h3>This website is for my project and it will become my official website soon.</h3>
-        <h6>©2021 John Conrad Abalos</h6>
+        <h6>©2021 John Conrad Abalos</h6>   
     </footer>
-
     <script>
 
         /*open sidebar for different devices */
@@ -143,13 +102,13 @@
                     y.style.marginLeft = "20vw";
                     z.style.display = "initial";
                     a.style.display = "initial";
-
+                    
                 } else {
                     x.style.width = "100%";
                     y.style.marginLeft = "0vw";
                     z.style.display = "none";
                     a.style.display = "none";
-
+                    
                 }
             } else {
                 if (screen.width > 1024) {
@@ -157,20 +116,16 @@
                     y.style.marginLeft = "0vw";
                     z.style.display = "initial";
                     a.style.display = "initial";
-
+                    
                 } else {
                     x.style.width = "0vw";
                     y.style.marginLeft = "0vw";
                     z.style.display = "initial";
                     a.style.display = "initial";
                 }
-
+                
             }
         }
-
-
-
-
 
     </script>
 </body>

@@ -1,4 +1,3 @@
 # PumpkinWarrior.github.io
 
-website soon
-just practicing
+Website for ITWS01

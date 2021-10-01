@@ -1,169 +1,34 @@
 ﻿<!DOCTYPE html>
-<html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Jc Abalos</title>
-    <link rel="icon" href="icons/index.ico">
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/animations/fade-in.css">
-    <link rel="stylesheet" href="css/animations/ease-in-from-left.css">
-    <script src="https://kit.fontawesome.com/4c7c5e368d.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="css/animation.css">
+    <title>PumpkinWarrior</title>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
 </head>
-
 <body>
-    <!--Testing-->
-    <div id="mySidebar" class="sidenav">
-
-        <!--Side navigation-->
-
-
-        <div class="avatar">
-            <img src="images/home_avatar.png" alt="avatar">
-
-        </div>
-        <div id="sociallinkword" style="text-align: center;"><b>Social Links</b></div>
-        <div class="icon-bar">
-            <a href="https://www.facebook.com/gaming/pumpkinwarrior22" target="blank"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://twitter.com/PumpkinW4rrior" target="blank"><i class="fab fa-twitter-square"></i></a>
-            <a href="https://www.instagram.com/pumpkinw4rrior" target="blank"><i class="fab fa-instagram-square"></i></a>
-            <a href="https://www.youtube.com/channel/UCqxQfACjfVD-sEd1gocPwWg" target="blank"><i class="fab fa-youtube-square"></i></a>
-            <a href="https://github.com/PumpkinWarrior" target="blank"><i class="fab fa-github-square"></i></a>
-            <a href="https://open.spotify.com/artist/4XCTE5J9rcRL8eKrdk03Tx?si=zqz0HWZtRNiRHFauJN-88A" target="blank"><i class="fab fa-spotify"></i></a>
-            <a href="https://music.apple.com/us/artist/pumpkinwarrior/1550112881" target="blank"><i class="fab fa-itunes-note"></i></a>
-            <a href="https://soundcloud.com/pumpkinwarrior" target="blank"><i class="fab fa-soundcloud"></i></a>
-            <a href="https://deezer.page.link/r65eEpSgJyzMXj2x7" target="blank"><i class="fab fa-deezer"></i></a>
-            <a href="https://music.amazon.com/artists/B08V8KCWHP/pumpkinwarrior" target="blank"><i class="fab fa-amazon"></i></a>
-            <a href="https://www.reddit.com/user/PDGreat" target="blank"><i class="fab fa-reddit-square"></i></a>
-            <a href="https://www.tiktok.com/@pumpkinw4rrior" target="blank"><i class="fab fa-tiktok"></i></a>
-            <a href="https://discord.gg/rjadfPv" target="blank"><i class="fab fa-discord"></i></a>
-        </div>
-        <hr />
-        <ul class="Shortcuts">
-            <li><a href="#about me" onclick="sidenav()">Who am I?</a></li>
-            <li><a href="#education" onclick="sidenav()">Education</a></li>
-            
-        </ul>
-
+    
+        
+    
+    <div class="centerlogo">
+        <img class="ease_in_below" src="images/logo.png">
+        <h1 class="centertext">SHARING MUSIC TO THE WORLD</h1> 
     </div>
+    <main class="center">
+        <div>
+            <h1>RELEASES</h1>
 
-    <div id="buttoncontainer">
-        <!--Sidebar button-->
-        <button id="openbtn" onclick="sidenav()">☰</button>
-
-    </div>
-
-
-
-    <!--Display Navigation Bar-->
-    <div class="topnavigation" id="topnav">
-        <div class="topnav">
-            <div>
-                <a class="active" href="index.html">Home</a>
-                <a href="music.html">Music</a>
-                <a href="contact.html">Contact</a>
-                <a href="about.html">About</a>
-
-
-            </div>
-        </div>
-        <div class="pagenameformat">
-
-            <!--Put hover higlight and text outline here-->
-            <a href="index.html">Jc Abalos</a>
-        </div>
-    </div>
-
-    <main id="marginmain">
-        <div class="bgcontainer">
-            <!--avatar image for smaller devices-->
-
-            <img class="avatarbg" src="images/avatar_bg.jpg" alt="avatarbg">
-            <div class="avatarcontainer"><img class="avatarimg" src="images/home_avatar.png" alt="avatar"></div>
-
-        </div>
-
-
-
-
-
-        <div class="parent">
-            <h1 style="font-family: arial;" id="about me">Hi I'm JC!</h1>
-            <div class="child">
-                <p>
-                    I'm John Conrad C. Abalos
-                    an aspiring programmer and an amateur music producer. He is currently 19 y/o.
-                    Currently Studying at Nueva Ecija University of Science and Technology
-                    taking Bachelor of Science in Information Technology.
-                </p>
-            </div>
-
-        </div>
-        <div class="parent">
-            <h1 style="font-family: arial;" id="education">Educational Background</h1>
-            <div class="child">
-                <ul>
-                    <li>College: Nueva Ecija University of Science and Technology (Bachelor of Science in Information Technology)</li>
-                    <li>Highschool: Honorato C. Perez Sr. Memorial Science High School (2014-2020)</li>
-                    <li>Secondary: Cabanatuan East Central School (2010-2014</li>
-                    <li>Primary and Secondary: Little Merry Hearts Montessori Center (2006-2008)</li>
-                </ul>
-            </div>
         </div>
 
 
     </main>
-    <footer id="footer">
-
-        <h3>This website is for my project and it will become my official website soon.</h3>
-        <h6>©2021 John Conrad Abalos</h6>
-
-    </footer>
-    <script>
-
-        /*open sidebar for different devices */
-        function sidenav() {
-            var x = document.getElementById("mySidebar");
-            var y = document.getElementById("marginmain");
-            var z = document.getElementById("topnav");
-            var a = document.getElementById("footer");
-            if (x.style.width == "0vw") {
-                if (screen.width > 1024) {
-                    x.style.width = "20vw";
-                    y.style.marginLeft = "20vw";
-                    z.style.display = "initial";
-                    a.style.display = "initial";
-
-                } else {
-                    x.style.width = "100%";
-                    y.style.marginLeft = "0vw";
-                    z.style.display = "none";
-                    a.style.display = "none";
-
-                }
-            } else {
-                if (screen.width > 1024) {
-                    x.style.width = "0vw";
-                    y.style.marginLeft = "0vw";
-                    z.style.display = "initial";
-                    a.style.display = "initial";
-
-                } else {
-                    x.style.width = "0vw";
-                    y.style.marginLeft = "0vw";
-                    z.style.display = "initial";
-                    a.style.display = "initial";
-                }
-
-            }
-        }
-           
-
-
-
-
-    </script>
+    
+    
 </body>
 </html>
-
-

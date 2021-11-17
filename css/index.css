@@ -29,7 +29,7 @@ body {
     }
     p {
         font-size: 1.5vw;
-        text-indent: 3vw;
+        
     }
 }
 
@@ -51,55 +51,121 @@ body {
 
 .spotifyembed { /*Putting content on a div*/
     position: relative;
-    padding-bottom: 2vh%;
+    padding-bottom: 2vh;
     padding-top: 2vh;
     overflow: hidden;
 }
-}
 
    /*2 columns section*/
-.column {
-    background-color: maroon;
-    font-size: 0;
-    width: 500px;
-    height: 500px;
-    padding: 20px;
-    
+
+
+@media (min-width: 1024px) { /*Desktop View*/
+    .column {
+        display: flex;
+        float: left;
+        width: 100%;
+       
+    }
+
+    .leftColumn, .rightColumn {
+        width: 50%;
+        margin-left:2.5%;
+        margin-right: 2.5%;
+        margin-bottom: 10%;
+        padding: 20px 20px 20px 0px;
+
+    }
+    .leftColumn {
+        text-align: center;
+        float: left;
+        background-color: rgb(211, 211, 211, 0.1);
+        transition: transform 0.3s;
+    }
+
+        .leftColumn:hover {
+            background-color: rgb(211, 211, 211, 0.2);
+            transform: scale(1.1)
+        }
+
+    .rightColumn {
+        text-align: center;
+        float: left;
+        background-color: rgb(211, 211, 211, 0.1);
+        transition: transform 0.3s;
+    }
+
+        .rightColumn:hover {
+            background-color: rgb(211, 211, 211, 0.2);
+            transform: scale(1.1)
+        }
 }
 
-.leftColumn, .rightColumn {
+@media (max-width: 1024px) {/*phone view*/
+
+
+
+    .column {
+        
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    .leftColumn, .rightColumn {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 2.5%;
+        padding: 20px 20px 20px 20px;
+        text-align: center;
+    }
+
+    .leftColumn {
+        text-align: center;
+        float: left;
+        background-color: rgb(211, 211, 211, 0.1);
+        transition: transform 0.3s;
+    }
+
+        .leftColumn:hover {
+            background-color: rgb(211, 211, 211, 0.2);
+            transform: scale(1.1)
+        }
+
+    .rightColumn {
+        text-align: center;
+        float: left;
+        background-color: rgb(211, 211, 211, 0.1);
+        transition: transform 0.3s;
+    }
+
+        .rightColumn:hover {
+            background-color: rgb(211, 211, 211, 0.2);
+            transform: scale(1.1)
+        }
+}
+
+/*Button*/
+
+.button {
+    background-color: #f7941e;
+    border: green;
+    border-width: thick;
+    color: black;
+    font-weight:700;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
-    box-sizing: border-box;
-    width: 45%;
-    height: 100%;
-    
+    font-size: 16px;
+    transition-duration: 0.4s;
 }
 
-.leftColumn {
-    text-align: center;
-    float: left;
-    background-color: rgb(128, 128, 128, 0.1);
-    margin-right: 2.5%;
-    margin-left: 2.5%;
-    height: 50vh;
-    transition: transform 0.2s;
-}
-
-    .leftColumn:hover {
-        background-color: rgb(128, 128, 128, 0.2);
-        transform: scale(1.1)
+    .button:hover {
+        background-color: #4CAF50; 
+        color: white;  
     }
 
-.rightColumn {
-    text-align: center;
-    float: left;
-    background-color: rgb(128, 128, 128, 0.1);
-    height: 50vh;
-    transition: transform 0.2s;
-}
-
-    .rightColumn:hover {
-        background-color: rgb(128, 128, 128, 0.2);
-        transform: scale(1.1)
-    }
 

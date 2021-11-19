@@ -52,7 +52,7 @@ a {
 }
 body{
     background-color: black;
-    line-height:1.6;
+    line-height:2;
 }
 
 .logo {
@@ -61,4 +61,16 @@ body{
     margin-left: auto;
     margin-right: auto;
     
+}
+
+.important {
+    overflow-x: auto;
+    text-align: center;
+    background-color: rgb(211, 211, 211, 0.1);
+    width: 50vw;
+    height: auto;
+    border: 1px solid #f7941e;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }

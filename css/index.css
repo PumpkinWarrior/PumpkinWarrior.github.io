@@ -135,7 +135,7 @@ a {
 
         .leftColumn:hover {
             background-color: rgb(211, 211, 211, 0.2);
-            transform: scale(1.1)
+            transform: scale(1.05)
         }
 
     .rightColumn {
@@ -147,7 +147,7 @@ a {
 
         .rightColumn:hover {
             background-color: rgb(211, 211, 211, 0.2);
-            transform: scale(1.1)
+            transform: scale(1.05)
         }
 }
 

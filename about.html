@@ -1,0 +1,577 @@
+<!--Tasks
+Commision Page with email
+
+
+
+-->
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="easyWeb.css" />
+    <link rel="stylesheet" href="format.css" />
+
+    <title>PumpkinWarrior</title>
+    <style>
+      @media screen and (min-width: 600px) {
+        #menuIcon {
+          display: none;
+        }
+        #menu {
+          display: block;
+        }
+      }
+
+      @media screen and (max-width: 599px) {
+        #title {
+          display: none;
+        }
+        .highlightDesc {
+          display: none;
+        }
+      }
+
+      #navHeader {
+        transition: top 0.5s;
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/4c7c5e368d.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body class="w3-black">
+    <!--Header-->
+    <div
+      id="navHeader"
+      class="w3-top"
+      style="z-index: 999; backdrop-filter: blur(5px)">
+      <!--Navigation Menu-->
+      <div class="w3-black w3-leftbar w3-border-deep-orange">
+        <div
+          id="menu"
+          class="w3-row w3-center"
+          style="position: block; z-index: 999; backdrop-filter: blur(3px)">
+          <nav
+            class="w3-containers w3-center w3-show w3-animate-zoom"
+            id="menu"
+            style="width: 100%">
+            <div id="title" class="w3-col" style="width: 60%">
+              <h1
+                class=""
+                style="
+                  font-family: Arial, Helvetica, sans-serif;
+                  font-size: 18px;
+                  color: lightgray;
+                  letter-spacing: 10px;
+                ">
+                SHARING MUSIC TO THE WORLD
+              </h1>
+            </div>
+            <a
+              href="./index.html"
+              class="w3-col w3-button w3-mobile"
+              style="width: 10%"
+              >Home</a
+            >
+            <a
+              href="./commisions.html"
+              class="w3-col w3-button w3-mobile"
+              style="width: 10%"
+              >Commission</a
+            >
+            <a
+              href="./portfolio.html"
+              class="w3-col w3-button w3-mobile"
+              style="width: 10%"
+              >Portfolio</a
+            >
+            <a
+              href="./about.html"
+              class="w3-col w3-button w3-mobile w3-orange"
+              style="width: 10%"
+              >About</a
+            >
+          </nav>
+
+          <script>
+            /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function () {
+              var currentScrollPos = window.pageYOffset;
+              if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navHeader").style.top = "0";
+              } else {
+                document.getElementById("navHeader").style.top = "-500px";
+              }
+              prevScrollpos = currentScrollPos;
+            };
+          </script>
+        </div>
+        <!--Fix this button-->
+        <div class="w3-center">
+          <button
+            onclick="showMenu('menu')"
+            id="menuIcon"
+            class="w3-round-xlarge w3-container w3-button w3-border"
+            style="
+              width: 100px;
+              position: relative;
+              z-index: 999;
+              backdrop-filter: blur(3px);
+            ">
+            ☰
+          </button>
+        </div>
+
+        <script>
+          function showMenu(id) {
+            var hMenu = document.getElementById(id);
+            if (hMenu.className.indexOf("w3-hide") == -1) {
+              hMenu.className += " w3-hide";
+              document.getElementById("menuIcon").innerHTML = "☰";
+            } else {
+              hMenu.className = hMenu.className.replace(" w3-hide", "");
+              document.getElementById("menuIcon").innerHTML = "&times";
+            }
+          }
+        </script>
+      </div>
+    </div>
+    <!-- Picture Slideshow -->
+    <!-- Copy the code below to insert new picture -->
+    <!-- <a href=""> <img class="pictureSlides w3-display-middle w3-animate-opacity" src="img/advertisement.png" style="max-height:400px;"></a>-->
+
+    <!--Background Image-->
+    <div id="Highlights" class="w3-display-container w3-section">
+      <div
+        class="w3-display-middle"
+        style="
+          position: absolute;
+          z-index: -10;
+          opacity: 0.3;
+          filter: blur(10px);
+        ">
+        <img
+          class="bgImage ew-height-600 w3-animate-opacity"
+          src="img/canvas.png" />
+        <img
+          class="bgImage ew-height-600 w3-animate-opacity"
+          src="img/advertisement.png" />
+        <img
+          class="bgImage ew-height-600 w3-animate-opacity"
+          src="img/you_baka.jpg" />
+        <img
+          class="bgImage ew-height-600 w3-animate-opacity"
+          src="img/retry.png" />
+        <img
+          class="bgImage ew-height-600 w3-animate-opacity"
+          src="img/coconut_dance.png" />
+      </div>
+
+      <!--Highlights Carousel-->
+      <div class="w3-padding-64" style="text-shadow: 2px 2px black">
+        <div class="pictureSlides w3-animate-opacity">
+          <div class="w3-col w3-half w3-center">
+            <a href="">
+              <img
+                class="w3-btn w3-image"
+                src="img/canvas.png"
+                style="max-height: 400px"
+            /></a>
+          </div>
+
+          <div class="highlightDesc w3-col w3-half w3-center w3-animate-right">
+            <h1>Canvas</h1>
+          </div>
+        </div>
+
+        <div class="pictureSlides w3-animate-opacity">
+          <div class="w3-col w3-half w3-center">
+            <a href="">
+              <img
+                class="w3-btn w3-image"
+                src="img/advertisement.png"
+                style="max-height: 400px"
+            /></a>
+          </div>
+
+          <div class="highlightDesc w3-col w3-half w3-center w3-animate-right">
+            <h1>Commissions now open</h1>
+          </div>
+        </div>
+
+        <div class="pictureSlides w3-animate-opacity">
+          <div class="w3-col w3-half w3-center">
+            <a href="">
+              <img
+                class="w3-btn w3-image"
+                src="img/you_baka.jpg"
+                style="max-height: 400px"
+            /></a>
+          </div>
+
+          <div class="highlightDesc w3-col w3-half w3-center w3-animate-right">
+            <h1>You "Baka"</h1>
+          </div>
+        </div>
+
+        <div class="pictureSlides w3-animate-opacity">
+          <div class="w3-col w3-half w3-center">
+            <a href="">
+              <img
+                class="w3-btn w3-image"
+                src="img/retry.png"
+                style="max-height: 400px"
+            /></a>
+          </div>
+
+          <div class="highlightDesc w3-col w3-half w3-center w3-animate-right">
+            <h1>Retry</h1>
+          </div>
+        </div>
+
+        <div class="pictureSlides w3-animate-opacity">
+          <div class="w3-col w3-half w3-center">
+            <a href="">
+              <img
+                class="w3-btn w3-image"
+                src="img/coconut_dance.png"
+                style="max-height: 400px"
+            /></a>
+          </div>
+
+          <div class="highlightDesc w3-col w3-half w3-center w3-animate-right">
+            <h1>Coconut Dance</h1>
+          </div>
+        </div>
+      </div>
+
+      <script></script>
+
+      <script>
+        //Highlights
+        //Auto Slideshow
+
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+          var i; //counter
+          var x = document.getElementsByClassName("pictureSlides");
+          var y = document.getElementsByClassName("bgImage");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            y[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {
+            myIndex = 1;
+          }
+          x[myIndex - 1].style.display = "block";
+          y[myIndex - 1].style.display = "block";
+          setTimeout(carousel, 8000);
+        }
+
+        //Click Slideshow
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+          showDivs((slideIndex += n));
+        }
+
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("pictureSlides");
+          var y = document.getElementsByClassName("bgImage");
+          if (n > x.length) {
+            slideIndex = 1;
+          }
+          if (n < 1) {
+            slideIndex = x.length;
+          }
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            y[i].style.display = "none";
+          }
+          x[slideIndex - 1].style.display = "block";
+          y[slideIndex - 1].style.display = "block";
+        }
+      </script>
+      <div class="w3-container">
+        <button
+          style="position: relative; z-index: 800"
+          class="w3-button w3-left w3-border w3-round-xlarge"
+          onclick="plusDivs(-1)">
+          &#10094;
+        </button>
+        <button
+          style="position: relative; z-index: 800"
+          class="w3-button w3-right w3-border w3-round-xlarge"
+          onclick="plusDivs(1)">
+          &#10095;
+        </button>
+      </div>
+    </div>
+
+    <!--Cards-->
+    <main class="w3-black">
+      <div class="w3-row-padding w3-section ew-shadow">
+        <div class="w3-section w3-display-container w3-col s12 m6 l4 w3-center">
+          <div
+            id="Socials"
+            class="w3-panel w3-border w3-border-orange w3-padding-16 w3-round">
+            <h1>Socials</h1>
+            <div class="w3-section w3-row">
+              <a
+                href="https://www.facebook.com/pumpkinw4rrior"
+                target="_blank"
+                rel="noreferrer noopener"
+                sz>
+                <i
+                  class="w3-button w3-col w3-rest w3-blue w3-large fa fa-facebook"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCqxQfACjfVD-sEd1gocPwWg"
+                target="_blank"
+                rel="noreferrer noopener">
+                <i
+                  class="w3-button w3-col w3-rest w3-red w3-large fa fa-youtube"></i>
+              </a>
+              <a
+                href="https://twitter.com/PumpkinW4rrior"
+                target="_blank"
+                rel="noreferrer noopener">
+                <i
+                  class="w3-button w3-col w3-rest w3-blue w3-large fa fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.tiktok.com/@pumpkinw4rrior"
+                target="_blank"
+                rel="noreferrer noopener">
+                <i
+                  class="w3-button w3-col w3-rest w3-black w3-large fa-brands fa-tiktok"></i>
+              </a>
+              <a
+                href="https://www.reddit.com/user/PumpyDGreat"
+                target="_blank"
+                rel="noreferrer noopener">
+                <i
+                  class="w3-button w3-rest w3-col w3-deep-orange w3-large fa-brands fa-reddit"></i>
+              </a>
+              <a
+                href="https://discord.gg/rjadfPv"
+                target="_blank"
+                rel="noreferrer noopener">
+                <i
+                  class="w3-button w3-rest w3-col w3-indigo w3-large fa-brands fa-discord"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="w3-section w3-display-container w3-col s12 m6 l4 w3-center">
+          <div
+            class="w3-panel w3-border w3-border-orange w3-padding-16 w3-round">
+            <h1>Commissions</h1>
+            <p>
+              Mixing, Mastering, Original Arrangements, Originals Soundtracks
+              and other audio assets that I can do.
+            </p>
+            <button class="w3-button w3-white w3-round w3-hover-orange">
+              <a class="ew-no-text-formatting" href="./commisions.html"
+                >Inquire Now</a
+              >
+            </button>
+          </div>
+        </div>
+        <div
+          class="w3-section w3-display-container w3-col s12 m12 l4 w3-center">
+          <div
+            class="w3-panel w3-border w3-border-orange w3-padding-16 w3-round">
+            <h1>Portfolio</h1>
+            <p>A compilation of my works</p>
+            <button class="w3-button w3-white w3-round w3-hover-orange">
+              Check Portfolio
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="Releases" class="w3-row-padding w3-section w3-container">
+        <h1>Releases</h1>
+
+        <!--Insert Releases here-->
+        <div class="w3-col s12 m6 l4 w3-center">
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/track/72N3H9v4pKckLaL8OBb3Bk?utm_source=generator"
+            width="100%"
+            height="352"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
+        </div>
+
+        <div class="w3-col s12 m6 l4 w3-center">
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/track/3zrkrrrQ33t1Kld6IEX9zS?utm_source=generator"
+            width="100%"
+            height="352"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
+        </div>
+
+        <div class="w3-col s12 m6 l4 w3-center">
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/track/29kq875VkJfAt592GLipy4?utm_source=generator"
+            width="100%"
+            height="352"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
+        </div>
+      </div>
+      <div class="ew-shadow w3-section w3-container">
+        <h1 class="w3-center">Portfolio</h1>
+        <div id="syncMusic" class="w3-row-padding w3-section w3-container">
+          <h2>Sync Music</h2>
+          <!--Insert youtube embeds here in a div-->
+
+          <div class="w3-col s12 m6 l4 w3-center">
+            <iframe
+              style="width: 100%"
+              src="https://www.youtube.com/embed/FojAyYaSaY8"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+
+          <div class="w3-col s12 m6 l4 w3-center">
+            <iframe
+              width="100%"
+              src="https://www.youtube.com/embed/NqjssZrXCdI"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+
+          <div class="w3-col s12 m6 l4 w3-center">
+            <iframe
+              width="100%"
+              src="https://www.youtube.com/embed/Xrrue99RefU"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+
+          <div class="w3-col s12 m6 l4 w3-center">
+            <iframe
+              width="100%"
+              src="https://www.youtube.com/embed/maCHEs8WhVM"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+        <div id="Mixing" class="w3-row-padding w3-section w3-container">
+          <h2>Mixing</h2>
+          <div class="w3-col s12 m6 l4 w3-center">
+            <iframe
+              width="100%"
+              src="https://www.youtube.com/embed/d5v8gsdOvxE"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+
+          <div class="w3-col s12 m6 l4 w3-center">
+            <iframe
+              width="100%"
+              src="https://www.youtube.com/embed/Gjszp01QDSE"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+
+          <div class="w3-col s12 m6 l4 w3-center">
+            <iframe
+              width="100%"
+              src="https://www.youtube.com/embed/Xu5KSDsQmmA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+
+          <div class="w3-col s12 m6 l4 w3-center">
+            <iframe
+              width="100%"
+              src="https://www.youtube.com/embed/YuRH9abwd_o"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+
+          <div class="w3-col s12 m6 l4 w3-center">
+            <iframe
+              width="100%"
+              src="https://www.youtube.com/embed/O4qC2vPTps0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <br />
+
+    <!--Footer-->
+    <footer class="w3-stretch" style="background-color: #341509">
+      <div class="w3-row" style="padding-top: 16px">
+        <div class="w3-col m4 13 w3-center">
+          <a href="#">Home</a><br />
+          <a href="#">Commission</a><br />
+          <a href="#">Portfolio</a><br />
+          <a href="#">About</a><br />
+        </div>
+
+        <div class="w3-col m4 13 w3-center">
+          <a href="#Highlights">Highlights</a><br />
+          <a href="#Socials">Socials</a><br />
+          <a href="#Releases">Releases</a><br />
+          <a href="#syncMusic">Sync Music</a><br />
+          <a href="#Mixing">Mixing</a><br />
+        </div>
+      </div>
+
+      <br />
+
+      <div class="w3-row">
+        <div class="w3-center">
+          <a href="#">Back on top</a>
+        </div>
+      </div>
+      <br />
+      <div class="w3-row">
+        <div class="w3-center">Ⓒ 2022 PumpkinWarrior</div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+.ew-padding-all {
+  padding: 16px, 16px, 16px, 16px;
+}
+
+.ew-height-600 {
+  height: 600px;
+}
+
+.ew-shadow {
+  box-shadow: 0px 0px 5px darkorange;
+}
+
+.ew-no-text-formatting {
+  text-decoration: none;
+}

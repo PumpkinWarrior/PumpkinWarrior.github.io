@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="easyWeb.css" />
+    <link rel="stylesheet" href="format.css" />
+
+    <title>PumpkinWarrior</title>
+    <style>
+      th,
+      td,
+      tr {
+        text-align: center !important;
+      }
+
+      @media screen and (min-width: 600px) {
+        #menuIcon {
+          display: none;
+        }
+        #slogan {
+          font-size: 20px;
+        }
+
+        #menu {
+          display: block;
+        }
+        #title {
+          width: 60%;
+        }
+      }
+
+      @media screen and (max-width: 599px) {
+        #title {
+          width: 100%;
+        }
+        #slogan {
+          font-size: 5vw;
+        }
+
+        .highlightDesc {
+          display: none;
+        }
+      }
+
+      #navHeader {
+        transition: top 0.5s;
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/4c7c5e368d.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body class="w3-black">
+    <!--Header-->
+    <div
+      id="navHeader"
+      class=""
+      style="z-index: 999; backdrop-filter: blur(5px)">
+      <!--Navigation Menu-->
+      <div class="w3-black w3-rightbar w3-border-deep-orange">
+        <div
+          id="menu"
+          class="w3-row w3-center"
+          style="position: block; z-index: 999; backdrop-filter: blur(3px)">
+          <nav
+            class="w3-containers w3-center w3-show w3-animate-top"
+            id="menu"
+            style="width: 100%">
+            <a
+              href="./index.html"
+              class="w3-col w3-button w3-mobile"
+              style="width: 10%"
+              >Home</a
+            >
+            <a
+              href="./commisions.html"
+              class="w3-col w3-button w3-orange w3-mobile"
+              style="width: 10%"
+              >Commission</a
+            >
+            <a
+              href="./portfolio.html"
+              class="w3-col w3-button w3-mobile"
+              style="width: 10%"
+              >Portfolio</a
+            >
+            <a
+              href="./about.html"
+              class="w3-col w3-button w3-mobile"
+              style="width: 10%"
+              >About</a
+            >
+            <div id="title" class="w3-col">
+              <h1
+                id="slogan"
+                class=""
+                style="
+                  font-family: Arial, Helvetica, sans-serif;
+
+                  color: lightgray;
+                  letter-spacing: 10px;
+                ">
+                SHARING MUSIC TO THE WORLD
+              </h1>
+            </div>
+          </nav>
+
+          <script>
+            /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function () {
+              var currentScrollPos = window.pageYOffset;
+              if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navHeader").style.top = "0";
+              } else {
+                document.getElementById("navHeader").style.top = "-500px";
+              }
+              prevScrollpos = currentScrollPos;
+            };
+          </script>
+        </div>
+        <!--Fix this button-->
+
+        <div class="w3-right-align">
+          <button
+            onclick="showMenu('menu')"
+            id="menuIcon"
+            class="w3-orange w3-container w3-button w3-border"
+            style="
+              position: relative;
+              z-index: 999;
+              backdrop-filter: blur(3px);
+            ">
+            ☰
+          </button>
+        </div>
+
+        <script>
+          function showMenu(id) {
+            var hMenu = document.getElementById(id);
+            if (hMenu.className.indexOf("w3-hide") == -1) {
+              hMenu.className += " w3-hide";
+              document.getElementById("menuIcon").innerHTML = "☰";
+            } else {
+              hMenu.className = hMenu.className.replace(" w3-hide", "");
+              document.getElementById("menuIcon").innerHTML = "&times";
+            }
+          }
+        </script>
+      </div>
+    </div>
+
+    <div class="w3-display-container w3-padding w3-section">
+      <div class="w3-row">
+        <h1>Rates</h1>
+      </div>
+      <div class="w3-row-padding">
+        <div class="w3-col l3 w3-padding">
+          <div class="w3-card w3-orange w3-mobile w3-round-xlarge">
+            <div class="w3-padding">
+              <h2 class="w3-center" style="font-weight: bold">Mastering</h2>
+              <p>Let's spice your music and make it sound good!</p>
+
+              <h3>Features:</h3>
+              <ul>
+                <li>Maximum of 3 minutes</li>
+                <li>7 Days work time</li>
+                <li>Free 1 Revision for 2 working days</li>
+              </ul>
+            </div>
+
+            <div class="w3-center">
+              <h1>$9.99</h1>
+            </div>
+
+            <div
+              class="w3-center w3-padding-32"
+              onclick="document.getElementById('proceed').style.display='block'">
+              <button
+                class="w3-button w3-center w3-green w3-round w3-hover-white">
+                <a class="ew-no-text-formatting">Proceed</a>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-col l3 w3-padding">
+          <div class="w3-card w3-orange w3-mobile w3-round-xlarge">
+            <div class="w3-padding">
+              <h2 class="w3-center" style="font-weight: bold">Mixing</h2>
+              <p>Let's spice your music and make it sound good!</p>
+
+              <h3>Features:</h3>
+              <ul>
+                <li>1 Vocal Track</li>
+                <li>Maximum of 3 minutes</li>
+                <li>7 Days work time</li>
+                <li>Free 1 Revision for 2 working days</li>
+              </ul>
+            </div>
+
+            <div class="w3-center">
+              <h1>$39.99</h1>
+            </div>
+
+            <div class="w3-center w3-padding-32">
+              <button
+                class="w3-button w3-center w3-green w3-round w3-hover-white">
+                <a class="ew-no-text-formatting" href="./commisions.html"
+                  >Proceed</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-col l3 w3-padding">
+          <div class="w3-card w3-orange w3-mobile w3-round-xlarge">
+            <div class="w3-padding">
+              <h2 class="w3-center" style="font-weight: bold">
+                Original Arrangement/ Remix
+              </h2>
+              <p>Want to make your own recipe? Let's cook something!</p>
+
+              <h3>Features:</h3>
+              <ul>
+                <li>Maximum of 3 minutes</li>
+                <li>Minimum of 14 Days work time</li>
+                <li>Mixing and Mastering included!</li>
+              </ul>
+            </div>
+
+            <div class="w3-center">
+              <h1>$189.99</h1>
+            </div>
+
+            <div class="w3-center w3-padding-32">
+              <button
+                class="w3-button w3-center w3-green w3-round w3-hover-white">
+                <a class="ew-no-text-formatting" href="./commisions.html"
+                  >Proceed</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col l3 w3-padding">
+          <div class="w3-card w3-orange w3-mobile w3-round-xlarge">
+            <div class="w3-padding">
+              <h2 class="w3-center" style="font-weight: bold">
+                Original Track
+              </h2>
+              <p>Let's create new music!</p>
+
+              <h3>Features:</h3>
+              <ul>
+                <li>Lyrics</li>
+                <li>Composition</li>
+                <li>Arrangement</li>
+                <li>Master Rights included</li>
+              </ul>
+            </div>
+
+            <div class="w3-center w3-padding-32">
+              <button
+                class="w3-button w3-center w3-green w3-round w3-hover-white"
+                onclick="document.getElementById('contact_us').style.display='block'">
+                <a class="ew-no-text-formatting">Contact Us</a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col l3 w3-padding">
+          <div class="w3-card w3-orange w3-mobile w3-round-xlarge">
+            <div class="w3-padding">
+              <h2 class="w3-center" style="font-weight: bold">Release</h2>
+              <p>Want a collaboration with me? Let's make some music!</p>
+            </div>
+
+            <div class="w3-center w3-padding-32">
+              <button
+                class="w3-button w3-center w3-green w3-round w3-hover-white"
+                onclick="document.getElementById('contact_us').style.display='block'">
+                <a class="ew-no-text-formatting">Contact Us</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Modal Contact Us-->
+    <div id="contact_us" class="w3-modal">
+      <div class="w3-modal-content w3-animate-bottom">
+        <div class="w3-container w3-orange">
+          <span
+            onclick="document.getElementById('contact_us').style.display='none'"
+            class="w3-button w3-display-topright"
+            >&times;</span
+          >
+          <h1>Contact Us</h1>
+        </div>
+        <div class="w3-container w3-white w3-padding-32">
+          <form class="w3-container">
+            <label class="w3-margin-top">Email</label>
+            <input
+              class="w3-input w3-border"
+              type="text"
+              placeholder="client@email.domain" />
+
+            <label class="w3-margin-top">Message</label>
+            <textarea
+              class="w3-input w3-border"
+              placeholder="I need help in creating new music. Let's make something together"></textarea>
+
+            <div class="w3-padding">
+              <button onclick="" class="w3-button w3-right w3-orange">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="w3-container w3-green">
+          <h4>Or Contact us via:</h4>
+          <div class="w3-row w3-panel">
+            <a
+              href="https://www.facebook.com/pumpkinw4rrior"
+              target="_blank"
+              rel="noreferrer noopener"
+              sz>
+              <i
+                class="w3-button l2 w3-col w3-blue w3-large fa fa-facebook"></i>
+            </a>
+            <a
+              href="https://discord.gg/U3z7YfQRrc"
+              target="_blank"
+              rel="noreferrer noopener">
+              <i
+                class="w3-button l2 w3-col w3-indigo w3-large fa-brands fa-discord"></i>
+            </a>
+            <a
+              href="https://twitter.com/PumpkinW4rrior"
+              target="_blank"
+              rel="noreferrer noopener">
+              <i class="w3-button l2 w3-col w3-blue w3-large fa fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Modal Additional Fees-->
+    <div id="proceed" class="w3-modal">
+      <div class="w3-modal-content w3-animate-bottom">
+        <div class="w3-container w3-orange">
+          <span
+            onclick="document.getElementById('proceed').style.display='none'"
+            class="w3-button w3-display-topright"
+            >&times;</span
+          >
+          <h1 style="font-weight: bold">Commision Estimated Breakdown</h1>
+        </div>
+
+        <div class="w3-panel w3-rest">
+          <table class="w3-table w3-green">
+            <tr>
+              <th>Service</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Subtotal</th>
+            </tr>
+            <tr class="w3-white">
+              <td id="service" style="font-weight: bold">Mastering</td>
+              <td></td>
+              <td id="service_price">$9.99</td>
+              <td></td>
+            </tr>
+            <tr id="vocal_tuning" class="w3-white">
+              <td>Vocal Tuning</td>
+              <td>
+                <form>
+                  <input
+                    id="vocal_tuning_quantity"
+                    type="number"
+                    min="0"
+                    onclick="vocalTuningPrice()" />
+                </form>
+              </td>
+              <td>$<span id="vocal_tuning_price">5</span></td>
+              <td id="vocal_tuning_subtotal"></td>
+              <script>
+                function vocalTuningPrice() {
+                  var quantity = parseFloat(
+                    document.getElementById("vocal_tuning_quantity").value
+                  );
+                  var price = parseFloat(
+                    document.getElementById("vocal_tuning_price").innerHTML
+                  );
+                  var subtotal = quantity * price;
+
+                  document.getElementById("vocal_tuning_subtotal").innerText =
+                    subtotal;
+                }
+              </script>
+            </tr>
+            <tr id="vocal_track" class="w3-white">
+              <td>Additional Vocal Track</td>
+              <td>
+                <form>
+                  <input
+                    id="vocal_track_quantity"
+                    type="number"
+                    min="0"
+                    onclick="vocalTrackPrice()" />
+                </form>
+              </td>
+              <td>$<span id="vocal_track_price">3</span></td>
+              <td id="vocal_track_subtotal"></td>
+              <script>
+                function vocalTrackPrice() {
+                  var quantity = parseFloat(
+                    document.getElementById("vocal_track_quantity").value
+                  );
+                  var price = parseFloat(
+                    document.getElementById("vocal_track_price").innerHTML
+                  );
+                  var subtotal = quantity * price;
+
+                  document.getElementById("vocal_track_subtotal").innerText =
+                    subtotal;
+                }
+              </script>
+            </tr>
+            <tr id="artificial_harmonies" class="w3-white">
+              <td>Artificial Harmonies</td>
+              <td>
+                <form>
+                  <input
+                    id="artificial_harmonies_quantity"
+                    type="number"
+                    min="0"
+                    onclick="artificialHarmoniesPrice()" />
+                </form>
+              </td>
+              <td>$<span id="artificial_harmonies_price">8</span></td>
+              <td id="artificial_harmonies_subtotal"></td>
+              <script>
+                function artificialHarmoniesPrice() {
+                  var quantity = parseFloat(
+                    document.getElementById("artificial_harmonies_quantity")
+                      .value
+                  );
+                  var price = parseFloat(
+                    document.getElementById("artificial_harmonies_price")
+                      .innerHTML
+                  );
+                  var subtotal = quantity * price;
+
+                  document.getElementById(
+                    "artificial_harmonies_subtotal"
+                  ).innerText = subtotal;
+                }
+              </script>
+            </tr>
+            <tr id="instrument_track" class="w3-white">
+              <td>Add Instrument Track on Mix</td>
+              <td>
+                <form>
+                  <input
+                    id="instrument_track_quantity"
+                    type="number"
+                    min="0"
+                    onclick="addInstrumentPrice()" />
+                </form>
+              </td>
+              <td>$<span id="instrument_track_price">2</span></td>
+              <td id="instrument_track_subtotal"></td>
+              <script>
+                function addInstrumentPrice() {
+                  var quantity = parseFloat(
+                    document.getElementById("instrument_track_quantity").value
+                  );
+                  var price = parseFloat(
+                    document.getElementById("instrument_track_price").innerHTML
+                  );
+                  var subtotal = quantity * price;
+
+                  document.getElementById(
+                    "instrument_track_subtotal"
+                  ).innerText = subtotal;
+                }
+              </script>
+            </tr>
+            <tr id="additional_master" class="w3-white">
+              <td>Additional Master</td>
+              <td>
+                <form>
+                  <input
+                    id="additional_master_quantity"
+                    type="number"
+                    min="0"
+                    onclick="additionalMasterPrice()" />
+                </form>
+              </td>
+              <td>$<span id="additional_master_price">5</span></td>
+              <td id="additional_master_subtotal"></td>
+              <script>
+                function additionalMasterPrice() {
+                  var quantity = parseFloat(
+                    document.getElementById("additional_master_quantity").value
+                  );
+                  var price = parseFloat(
+                    document.getElementById("additional_master_price").innerHTML
+                  );
+                  var subtotal = quantity * price;
+
+                  document.getElementById(
+                    "additional_master_subtotal"
+                  ).innerText = subtotal;
+                }
+              </script>
+            </tr>
+            <tr id="additional_time" class="w3-white">
+              <td>Additional 1 minute</td>
+              <td>
+                <form>
+                  <input
+                    id="additional_time_quantity"
+                    type="number"
+                    min="0"
+                    onclick="additionalTimePrice()" />
+                </form>
+              </td>
+              <td>$<span id="additional_time_price">5</span></td>
+              <td id="additional_time_subtotal"></td>
+              <script>
+                function additionalTimePrice() {
+                  var quantity = parseFloat(
+                    document.getElementById("additional_time_quantity").value
+                  );
+                  var price = parseFloat(
+                    document.getElementById("additional_time_price").innerHTML
+                  );
+                  var subtotal = quantity * price;
+
+                  document.getElementById(
+                    "additional_time_subtotal"
+                  ).innerText = subtotal;
+                }
+              </script>
+            </tr>
+          </table>
+        </div>
+
+        <div class="w3-container w3-orange">
+          <h1>Contact Us</h1>
+        </div>
+        <div class="w3-container w3-white w3-padding-32">
+          <form class="w3-container">
+            <label class="w3-margin-top">Email</label>
+            <input
+              class="w3-input w3-border"
+              type="text"
+              placeholder="client@email.domain" />
+
+            <label class="w3-margin-top">Message</label>
+            <textarea
+              class="w3-input w3-border"
+              placeholder="I need help in creating new music. Let's make something together"></textarea>
+
+            <div class="w3-padding">
+              <button onclick="" class="w3-button w3-right w3-orange">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="w3-container w3-green">
+          <h4>Or Contact us via:</h4>
+          <div class="w3-row w3-panel">Hi Alpha I am a footer</div>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="w3-stretch" style="background-color: #341509">
+      <div class="w3-row" style="padding-top: 16px">
+        <div class="w3-col m4 13 w3-center">
+          <a href="#">Home</a><br />
+          <a href="#">Commission</a><br />
+          <a href="#">Portfolio</a><br />
+          <a href="#">About</a><br />
+        </div>
+
+        <div class="w3-col m4 13 w3-center">
+          <a href="#">Highlights</a><br />
+          <a href="#">Socials</a><br />
+          <a href="#">Originals</a><br />
+        </div>
+      </div>
+
+      <br />
+
+      <div class="w3-row">
+        <div class="w3-center">
+          <a href="#">Back on top</a>
+        </div>
+      </div>
+      <br />
+      <div class="w3-row">
+        <div class="w3-center">Ⓒ 2022 PumpkinWarrior</div>
+      </div>
+    </footer>
+  </body>
+</html>

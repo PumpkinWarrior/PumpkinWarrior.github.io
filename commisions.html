@@ -15,6 +15,10 @@
         text-align: center !important;
       }
 
+      input {
+        width: 20%;
+      }
+
       @media screen and (min-width: 600px) {
         #menuIcon {
           display: none;
@@ -156,6 +160,8 @@
       <div class="w3-row">
         <h1>Rates</h1>
       </div>
+
+      <!--Mastering-->
       <div class="w3-row-padding">
         <div class="w3-col l3 w3-padding">
           <div class="w3-card w3-orange w3-mobile w3-round-xlarge">
@@ -175,17 +181,42 @@
               <h1>$9.99</h1>
             </div>
 
-            <div
-              class="w3-center w3-padding-32"
-              onclick="document.getElementById('proceed').style.display='block'">
+            <div class="w3-center w3-padding-32" onclick="">
               <button
+                onclick="setMixing()"
                 class="w3-button w3-center w3-green w3-round w3-hover-white">
                 <a class="ew-no-text-formatting">Proceed</a>
               </button>
             </div>
           </div>
+          <script>
+            function setMixing() {
+              //display modal
+              document.getElementById("proceed").style.display = "block";
+
+              //set variables for mastering
+              var mixingPrice = 9.99;
+              var service = "Mastering";
+
+              //display variables for mastering
+              document.getElementById("service_price").innerHTML =
+                "$" + mixingPrice;
+              document.getElementById("service").innerHTML = "Mastering";
+
+              //hide some rows
+              document.getElementById("vocal_tuning").style.display = "none";
+              document.getElementById("artificial_harmonies").style.display =
+                "none";
+              document.getElementById("instrument_track").style.display =
+                "none";
+              document.getElementById(
+                "additional_instrument_arrangement"
+              ).style.display = "none";
+            }
+          </script>
         </div>
 
+        <!--Mixing-->
         <div class="w3-col l3 w3-padding">
           <div class="w3-card w3-orange w3-mobile w3-round-xlarge">
             <div class="w3-padding">
@@ -202,7 +233,7 @@
             </div>
 
             <div class="w3-center">
-              <h1>$39.99</h1>
+              <h1>$29.99</h1>
             </div>
 
             <div class="w3-center w3-padding-32">
@@ -215,7 +246,7 @@
             </div>
           </div>
         </div>
-
+        <!--Original Arrangement-->
         <div class="w3-col l3 w3-padding">
           <div class="w3-card w3-orange w3-mobile w3-round-xlarge">
             <div class="w3-padding">
@@ -246,6 +277,7 @@
             </div>
           </div>
         </div>
+        <!--Original Track-->
         <div class="w3-col l3 w3-padding">
           <div class="w3-card w3-orange w3-mobile w3-round-xlarge">
             <div class="w3-padding">
@@ -272,6 +304,7 @@
             </div>
           </div>
         </div>
+        <!--Release-->
         <div class="w3-col l3 w3-padding">
           <div class="w3-card w3-orange w3-mobile w3-round-xlarge">
             <div class="w3-padding">
@@ -372,10 +405,10 @@
               <th>Subtotal</th>
             </tr>
             <tr class="w3-white">
-              <td id="service" style="font-weight: bold">Mastering</td>
+              <td id="service" style="font-weight: bold"></td>
               <td></td>
-              <td id="service_price">$9.99</td>
-              <td></td>
+              <td id="service_price"></td>
+              <td id="service_subtotal"></td>
             </tr>
             <tr id="vocal_tuning" class="w3-white">
               <td>Vocal Tuning</td>
@@ -385,52 +418,56 @@
                     id="vocal_tuning_quantity"
                     type="number"
                     min="0"
+                    value="0"
+                    onKeyDown="return false"
                     onclick="vocalTuningPrice()" />
                 </form>
               </td>
-              <td>$<span id="vocal_tuning_price">5</span></td>
+              <td>$<span id="vocal_tuning_price">4.99</span></td>
               <td id="vocal_tuning_subtotal"></td>
               <script>
-                function vocalTuningPrice() {
-                  var quantity = parseFloat(
-                    document.getElementById("vocal_tuning_quantity").value
-                  );
-                  var price = parseFloat(
-                    document.getElementById("vocal_tuning_price").innerHTML
-                  );
-                  var subtotal = quantity * price;
+                    function vocalTuningPrice() {
+                      var quantity = parseFloat(
+                        document.getElementById("vocal_tuning_quantity").value
+                      );
+                      var price = parseFloat(
+                        document.getElementById("vocal_tuning_price").innerHTML
+                      );
+                      var subtotal = quantity * price;
 
-                  document.getElementById("vocal_tuning_subtotal").innerText =
-                    subtotal;
-                }
-              </script>
-            </tr>
-            <tr id="vocal_track" class="w3-white">
-              <td>Additional Vocal Track</td>
-              <td>
-                <form>
-                  <input
-                    id="vocal_track_quantity"
-                    type="number"
-                    min="0"
-                    onclick="vocalTrackPrice()" />
-                </form>
-              </td>
-              <td>$<span id="vocal_track_price">3</span></td>
-              <td id="vocal_track_subtotal"></td>
-              <script>
-                function vocalTrackPrice() {
-                  var quantity = parseFloat(
-                    document.getElementById("vocal_track_quantity").value
-                  );
-                  var price = parseFloat(
-                    document.getElementById("vocal_track_price").innerHTML
-                  );
-                  var subtotal = quantity * price;
+                      document.getElementById("vocal_tuning_subtotal").innerText =
+                        "$" + subtotal.toFixed(2);
+                    }
+                  </script>
+                </tr>
+                <tr id="vocal_track" class="w3-white">
+                  <td>Number of Vocal Tracks</td>
+                  <td>
+                    <form>
+                      <input
+                        id="vocal_track_quantity"
+                        type="number"
+                        min="0"
+                        value="0"
+                        onKeyDown="return false"
+                        onclick="vocalTrackPrice()" />
+                    </form>
+                  </td>
+                  <td>$<span id="vocal_track_price">3.99</span></td>
+                  <td id="vocal_track_subtotal"></td>
+                  <script>
+                    function vocalTrackPrice() {
+                      var quantity = parseFloat(
+                        document.getElementById("vocal_track_quantity").value
+                      );
+                      var price = parseFloat(
+                        document.getElementById("vocal_track_price").innerHTML
+                      );
+                      var subtotal = quantity * price;
 
-                  document.getElementById("vocal_track_subtotal").innerText =
-                    subtotal;
-                }
+                      document.getElementById("vocal_track_subtotal").innerText =
+                        "$" + subtotal.toFixed(2);
+                    }
               </script>
             </tr>
             <tr id="artificial_harmonies" class="w3-white">
@@ -441,10 +478,12 @@
                     id="artificial_harmonies_quantity"
                     type="number"
                     min="0"
+                    value="0"
+                    onKeyDown="return false"
                     onclick="artificialHarmoniesPrice()" />
                 </form>
               </td>
-              <td>$<span id="artificial_harmonies_price">8</span></td>
+              <td>$<span id="artificial_harmonies_price">8.99</span></td>
               <td id="artificial_harmonies_subtotal"></td>
               <script>
                 function artificialHarmoniesPrice() {
@@ -460,22 +499,24 @@
 
                   document.getElementById(
                     "artificial_harmonies_subtotal"
-                  ).innerText = subtotal;
+                  ).innerText = "$" + subtotal.toFixed(2);
                 }
               </script>
             </tr>
             <tr id="instrument_track" class="w3-white">
-              <td>Add Instrument Track on Mix</td>
+              <td>Number of Instrument Track</td>
               <td>
                 <form>
                   <input
                     id="instrument_track_quantity"
                     type="number"
                     min="0"
+                    value="0"
+                    onKeyDown="return false"
                     onclick="addInstrumentPrice()" />
                 </form>
               </td>
-              <td>$<span id="instrument_track_price">2</span></td>
+              <td>$<span id="instrument_track_price">2.99</span></td>
               <td id="instrument_track_subtotal"></td>
               <script>
                 function addInstrumentPrice() {
@@ -489,7 +530,7 @@
 
                   document.getElementById(
                     "instrument_track_subtotal"
-                  ).innerText = subtotal;
+                  ).innerText = "$" + subtotal.toFixed(2);
                 }
               </script>
             </tr>
@@ -501,10 +542,12 @@
                     id="additional_master_quantity"
                     type="number"
                     min="0"
+                    value="0"
+                    onKeyDown="return false"
                     onclick="additionalMasterPrice()" />
                 </form>
               </td>
-              <td>$<span id="additional_master_price">5</span></td>
+              <td>$<span id="additional_master_price">4.99</span></td>
               <td id="additional_master_subtotal"></td>
               <script>
                 function additionalMasterPrice() {
@@ -518,7 +561,7 @@
 
                   document.getElementById(
                     "additional_master_subtotal"
-                  ).innerText = subtotal;
+                  ).innerText = "$" + subtotal.toFixed(2);
                 }
               </script>
             </tr>
@@ -530,10 +573,12 @@
                     id="additional_time_quantity"
                     type="number"
                     min="0"
+                    value="0"
+                    onKeyDown="return false"
                     onclick="additionalTimePrice()" />
                 </form>
               </td>
-              <td>$<span id="additional_time_price">5</span></td>
+              <td>$<span id="additional_time_price">4.99</span></td>
               <td id="additional_time_subtotal"></td>
               <script>
                 function additionalTimePrice() {
@@ -547,7 +592,127 @@
 
                   document.getElementById(
                     "additional_time_subtotal"
-                  ).innerText = subtotal;
+                  ).innerText = "$" + subtotal.toFixed(2);
+                }
+              </script>
+            </tr>
+
+            <tr id="additional_revision" class="w3-white">
+              <td>Additional Revision</td>
+              <td>
+                <form>
+                  <input
+                    id="additional_revision_quantity"
+                    type="number"
+                    min="0"
+                    value="0"
+                    onKeyDown="return false"
+                    onclick="additionalRevisionPrice()" />
+                </form>
+              </td>
+              <td>$<span id="additional_revision_price">5.99</span></td>
+              <td id="additional_revision_subtotal"></td>
+              <script>
+                function additionalRevisionPrice() {
+                  var quantity = parseFloat(
+                    document.getElementById("additional_revision_quantity")
+                      .value
+                  );
+                  var price = parseFloat(
+                    document.getElementById("additional_revision_price")
+                      .innerHTML
+                  );
+                  var subtotal = quantity * price;
+
+                  document.getElementById(
+                    "additional_revision_subtotal"
+                  ).innerText = "$" + subtotal.toFixed(2);
+                }
+              </script>
+            </tr>
+
+            <tr id="additional_instrument_arrangement" class="w3-white">
+              <td>Additional Instrument Arrangement</td>
+              <td>
+                <form>
+                  <input
+                    id="additional_instrument_arrangement_quantity"
+                    type="number"
+                    min="0"
+                    value="0"
+                    onKeyDown="return false"
+                    onclick="additionalInstrumentArrangementPrice()" />
+                </form>
+              </td>
+              <td>
+                $<span id="additional_instrument_arrangement_price">8.99</span>
+              </td>
+              <td id="additional_instrument_arrangement_subtotal"></td>
+              <script>
+                function additionalInstrumentArrangementPrice() {
+                  var quantity = parseFloat(
+                    document.getElementById(
+                      "additional_instrument_arrangement_quantity"
+                    ).value
+                  );
+                  var price = parseFloat(
+                    document.getElementById(
+                      "additional_instrument_arrangement_price"
+                    ).innerHTML
+                  );
+                  var subtotal = quantity * price;
+
+                  document.getElementById(
+                    "additional_instrument_arrangement_subtotal"
+                  ).innerText = "$" + subtotal.toFixed(2);
+                }
+              </script>
+            </tr>
+
+            <tr id="rush" class="w3-white">
+              <td>Rush</td>
+              <td>
+                <form>
+                  
+                  <input type="checkbox"
+                  id="rush_button"
+                  onclick="rushPrice()">
+                  
+                </input>
+                  
+                  </form>
+        
+              </td>
+              <td>$<span id="rush_price">6.99</span></td>
+              <td id="rush_subtotal"></td>
+              <script>
+
+                ///fix this function later
+                function rushPrice() {
+
+                  var checkbox = document.getElementById("rush_button");
+                  var test = checkbox.checked; // it returns Boolean value
+                  var price = parseFloat(
+                    document.getElementById(
+                      "rush_price"
+                    ).innerHTML
+                  );
+
+                  if (test = true){
+
+                  document.getElementById(
+                    "rush_subtotal"
+                  ).innerText ="$"+ price;
+
+
+                  }else{
+
+                    document.getElementById(
+                    "rush_subtotal"
+                  ).innerText ="";
+
+
+                  };
                 }
               </script>
             </tr>

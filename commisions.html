@@ -319,7 +319,7 @@
       <div class="w3-modal-content w3-animate-bottom">
         <div class="w3-container w3-orange">
           <span
-            onclick="document.getElementById('contact_us').style.display='none'"
+            onclick="modalClose()"
             class="w3-button w3-display-topright"
             >&times;</span
           >
@@ -379,7 +379,7 @@
       <div class="w3-modal-content w3-animate-bottom">
         <div class="w3-container w3-orange">
           <span
-            onclick="document.getElementById('proceed').style.display='none'"
+            onclick="modalClose()"
             class="w3-button w3-display-topright"
             >&times;</span
           >
@@ -394,11 +394,11 @@
               <th>Price</th>
               <th>Subtotal</th>
             </tr>
-            <tr >
+            <tr>
               <td id="service" style="font-weight: bold"></td>
               <td></td>
               <td id="service_price"></td>
-              <td id="service_subtotal"></td>
+              <td >$<span id="service_subtotal"></span></td>
             </tr>
             <tr id="vocal_tuning" >
               <td>Vocal Tuning</td>
@@ -557,6 +557,15 @@
               </td>
               <td>$<span id="rush_price">6.99</span></td>
               <td id="rush_subtotal"></td>
+
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td style="font-weight: bold;">Total</td>
+              <td id="total"></td>
+
+
 
             </tr>
           </table>

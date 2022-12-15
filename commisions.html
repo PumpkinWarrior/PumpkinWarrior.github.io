@@ -12,7 +12,8 @@
       th,
       td,
       tr {
-        text-align: center !important;
+        
+        color:black;
       }
 
       input {
@@ -33,6 +34,10 @@
         #title {
           width: 60%;
         }
+        input {
+        width: 30%;
+        
+      }
       }
 
       @media screen and (max-width: 599px) {
@@ -46,6 +51,10 @@
         .highlightDesc {
           display: none;
         }
+        input {
+        width: 100%;
+      }
+
       }
 
       #navHeader {
@@ -55,6 +64,7 @@
     <script
       src="https://kit.fontawesome.com/4c7c5e368d.js"
       crossorigin="anonymous"></script>
+      <script type="text/javascript" src="commisions.js"></script>
   </head>
   <body class="w3-black">
     <!--Header-->
@@ -161,6 +171,8 @@
         <h1>Rates</h1>
       </div>
 
+
+
       <!--Mastering-->
       <div class="w3-row-padding">
         <div class="w3-col l3 w3-padding">
@@ -183,37 +195,13 @@
 
             <div class="w3-center w3-padding-32" onclick="">
               <button
-                onclick="setMixing()"
+                onclick="setMastering()"
                 class="w3-button w3-center w3-green w3-round w3-hover-white">
                 <a class="ew-no-text-formatting">Proceed</a>
               </button>
             </div>
           </div>
-          <script>
-            function setMixing() {
-              //display modal
-              document.getElementById("proceed").style.display = "block";
-
-              //set variables for mastering
-              var mixingPrice = 9.99;
-              var service = "Mastering";
-
-              //display variables for mastering
-              document.getElementById("service_price").innerHTML =
-                "$" + mixingPrice;
-              document.getElementById("service").innerHTML = "Mastering";
-
-              //hide some rows
-              document.getElementById("vocal_tuning").style.display = "none";
-              document.getElementById("artificial_harmonies").style.display =
-                "none";
-              document.getElementById("instrument_track").style.display =
-                "none";
-              document.getElementById(
-                "additional_instrument_arrangement"
-              ).style.display = "none";
-            }
-          </script>
+    
         </div>
 
         <!--Mixing-->
@@ -238,8 +226,9 @@
 
             <div class="w3-center w3-padding-32">
               <button
+              onclick="setMixing()"
                 class="w3-button w3-center w3-green w3-round w3-hover-white">
-                <a class="ew-no-text-formatting" href="./commisions.html"
+                <a class="ew-no-text-formatting" 
                   >Proceed</a
                 >
               </button>
@@ -269,8 +258,9 @@
 
             <div class="w3-center w3-padding-32">
               <button
+                onclick="setRemix()"
                 class="w3-button w3-center w3-green w3-round w3-hover-white">
-                <a class="ew-no-text-formatting" href="./commisions.html"
+                <a class="ew-no-text-formatting" 
                   >Proceed</a
                 >
               </button>
@@ -396,21 +386,21 @@
           <h1 style="font-weight: bold">Commision Estimated Breakdown</h1>
         </div>
 
-        <div class="w3-panel w3-rest">
-          <table class="w3-table w3-green">
-            <tr>
+        <div class="w3-panel w3-rest w3-responsive">
+          <table class="w3-table w3-striped w3-centered ">
+            <tr  class="w3-green">
               <th>Service</th>
               <th>Quantity</th>
               <th>Price</th>
               <th>Subtotal</th>
             </tr>
-            <tr class="w3-white">
+            <tr >
               <td id="service" style="font-weight: bold"></td>
               <td></td>
               <td id="service_price"></td>
               <td id="service_subtotal"></td>
             </tr>
-            <tr id="vocal_tuning" class="w3-white">
+            <tr id="vocal_tuning" >
               <td>Vocal Tuning</td>
               <td>
                 <form>
@@ -425,22 +415,9 @@
               </td>
               <td>$<span id="vocal_tuning_price">4.99</span></td>
               <td id="vocal_tuning_subtotal"></td>
-              <script>
-                    function vocalTuningPrice() {
-                      var quantity = parseFloat(
-                        document.getElementById("vocal_tuning_quantity").value
-                      );
-                      var price = parseFloat(
-                        document.getElementById("vocal_tuning_price").innerHTML
-                      );
-                      var subtotal = quantity * price;
-
-                      document.getElementById("vocal_tuning_subtotal").innerText =
-                        "$" + subtotal.toFixed(2);
-                    }
-                  </script>
+           
                 </tr>
-                <tr id="vocal_track" class="w3-white">
+                <tr id="vocal_track" >
                   <td>Number of Vocal Tracks</td>
                   <td>
                     <form>
@@ -455,22 +432,9 @@
                   </td>
                   <td>$<span id="vocal_track_price">3.99</span></td>
                   <td id="vocal_track_subtotal"></td>
-                  <script>
-                    function vocalTrackPrice() {
-                      var quantity = parseFloat(
-                        document.getElementById("vocal_track_quantity").value
-                      );
-                      var price = parseFloat(
-                        document.getElementById("vocal_track_price").innerHTML
-                      );
-                      var subtotal = quantity * price;
-
-                      document.getElementById("vocal_track_subtotal").innerText =
-                        "$" + subtotal.toFixed(2);
-                    }
-              </script>
+               
             </tr>
-            <tr id="artificial_harmonies" class="w3-white">
+            <tr id="artificial_harmonies" >
               <td>Artificial Harmonies</td>
               <td>
                 <form>
@@ -485,25 +449,9 @@
               </td>
               <td>$<span id="artificial_harmonies_price">8.99</span></td>
               <td id="artificial_harmonies_subtotal"></td>
-              <script>
-                function artificialHarmoniesPrice() {
-                  var quantity = parseFloat(
-                    document.getElementById("artificial_harmonies_quantity")
-                      .value
-                  );
-                  var price = parseFloat(
-                    document.getElementById("artificial_harmonies_price")
-                      .innerHTML
-                  );
-                  var subtotal = quantity * price;
-
-                  document.getElementById(
-                    "artificial_harmonies_subtotal"
-                  ).innerText = "$" + subtotal.toFixed(2);
-                }
-              </script>
+              
             </tr>
-            <tr id="instrument_track" class="w3-white">
+            <tr id="instrument_track" >
               <td>Number of Instrument Track</td>
               <td>
                 <form>
@@ -518,23 +466,9 @@
               </td>
               <td>$<span id="instrument_track_price">2.99</span></td>
               <td id="instrument_track_subtotal"></td>
-              <script>
-                function addInstrumentPrice() {
-                  var quantity = parseFloat(
-                    document.getElementById("instrument_track_quantity").value
-                  );
-                  var price = parseFloat(
-                    document.getElementById("instrument_track_price").innerHTML
-                  );
-                  var subtotal = quantity * price;
-
-                  document.getElementById(
-                    "instrument_track_subtotal"
-                  ).innerText = "$" + subtotal.toFixed(2);
-                }
-              </script>
+         
             </tr>
-            <tr id="additional_master" class="w3-white">
+            <tr id="additional_master" >
               <td>Additional Master</td>
               <td>
                 <form>
@@ -549,23 +483,9 @@
               </td>
               <td>$<span id="additional_master_price">4.99</span></td>
               <td id="additional_master_subtotal"></td>
-              <script>
-                function additionalMasterPrice() {
-                  var quantity = parseFloat(
-                    document.getElementById("additional_master_quantity").value
-                  );
-                  var price = parseFloat(
-                    document.getElementById("additional_master_price").innerHTML
-                  );
-                  var subtotal = quantity * price;
-
-                  document.getElementById(
-                    "additional_master_subtotal"
-                  ).innerText = "$" + subtotal.toFixed(2);
-                }
-              </script>
+          
             </tr>
-            <tr id="additional_time" class="w3-white">
+            <tr id="additional_time" >
               <td>Additional 1 minute</td>
               <td>
                 <form>
@@ -580,24 +500,10 @@
               </td>
               <td>$<span id="additional_time_price">4.99</span></td>
               <td id="additional_time_subtotal"></td>
-              <script>
-                function additionalTimePrice() {
-                  var quantity = parseFloat(
-                    document.getElementById("additional_time_quantity").value
-                  );
-                  var price = parseFloat(
-                    document.getElementById("additional_time_price").innerHTML
-                  );
-                  var subtotal = quantity * price;
-
-                  document.getElementById(
-                    "additional_time_subtotal"
-                  ).innerText = "$" + subtotal.toFixed(2);
-                }
-              </script>
+    
             </tr>
 
-            <tr id="additional_revision" class="w3-white">
+            <tr id="additional_revision">
               <td>Additional Revision</td>
               <td>
                 <form>
@@ -612,26 +518,10 @@
               </td>
               <td>$<span id="additional_revision_price">5.99</span></td>
               <td id="additional_revision_subtotal"></td>
-              <script>
-                function additionalRevisionPrice() {
-                  var quantity = parseFloat(
-                    document.getElementById("additional_revision_quantity")
-                      .value
-                  );
-                  var price = parseFloat(
-                    document.getElementById("additional_revision_price")
-                      .innerHTML
-                  );
-                  var subtotal = quantity * price;
-
-                  document.getElementById(
-                    "additional_revision_subtotal"
-                  ).innerText = "$" + subtotal.toFixed(2);
-                }
-              </script>
+    
             </tr>
 
-            <tr id="additional_instrument_arrangement" class="w3-white">
+            <tr id="additional_instrument_arrangement" >
               <td>Additional Instrument Arrangement</td>
               <td>
                 <form>
@@ -648,28 +538,10 @@
                 $<span id="additional_instrument_arrangement_price">8.99</span>
               </td>
               <td id="additional_instrument_arrangement_subtotal"></td>
-              <script>
-                function additionalInstrumentArrangementPrice() {
-                  var quantity = parseFloat(
-                    document.getElementById(
-                      "additional_instrument_arrangement_quantity"
-                    ).value
-                  );
-                  var price = parseFloat(
-                    document.getElementById(
-                      "additional_instrument_arrangement_price"
-                    ).innerHTML
-                  );
-                  var subtotal = quantity * price;
-
-                  document.getElementById(
-                    "additional_instrument_arrangement_subtotal"
-                  ).innerText = "$" + subtotal.toFixed(2);
-                }
-              </script>
+        
             </tr>
 
-            <tr id="rush" class="w3-white">
+            <tr id="rush">
               <td>Rush</td>
               <td>
                 <form>
@@ -685,38 +557,10 @@
               </td>
               <td>$<span id="rush_price">6.99</span></td>
               <td id="rush_subtotal"></td>
-              <script>
 
-                ///fix this function later
-                function rushPrice() {
-
-                  var checkbox = document.getElementById("rush_button");
-                  var test = checkbox.checked; // it returns Boolean value
-                  var price = parseFloat(
-                    document.getElementById(
-                      "rush_price"
-                    ).innerHTML
-                  );
-
-                  if (test = true){
-
-                  document.getElementById(
-                    "rush_subtotal"
-                  ).innerText ="$"+ price;
-
-
-                  }else{
-
-                    document.getElementById(
-                    "rush_subtotal"
-                  ).innerText ="";
-
-
-                  };
-                }
-              </script>
             </tr>
           </table>
+   
         </div>
 
         <div class="w3-container w3-orange">
@@ -744,7 +588,33 @@
         </div>
         <div class="w3-container w3-green">
           <h4>Or Contact us via:</h4>
-          <div class="w3-row w3-panel">Hi Alpha I am a footer</div>
+          <div class="w3-row w3-panel">
+
+
+            <a
+            href="https://www.facebook.com/pumpkinw4rrior"
+            target="_blank"
+            rel="noreferrer noopener"
+            sz>
+            <i
+              class="w3-button l2 w3-col w3-blue w3-large fa fa-facebook"></i>
+          </a>
+          <a
+            href="https://discord.gg/U3z7YfQRrc"
+            target="_blank"
+            rel="noreferrer noopener">
+            <i
+              class="w3-button l2 w3-col w3-indigo w3-large fa-brands fa-discord"></i>
+          </a>
+          <a
+            href="https://twitter.com/PumpkinW4rrior"
+            target="_blank"
+            rel="noreferrer noopener">
+            <i class="w3-button l2 w3-col w3-blue w3-large fa fa-twitter"></i>
+          </a>
+
+
+          </div>
         </div>
       </div>
     </div>
